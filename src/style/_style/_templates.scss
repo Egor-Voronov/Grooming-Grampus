@@ -1,0 +1,70 @@
+// обнуления
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// подключения шрифтов
+@font-face {
+    font-family: "Circe-Extrabold";
+    src: url(../fonts/Circe-ExtraBold.woff2);
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "Circe-Regular";
+    src: url(../fonts/Circe-Regular.woff2);
+    font-weight: 400;
+}
+
+// кастомный скроллбар
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::selection{
+  background: rgb(0,123,255,0.3);
+}
+
+// стилизация активных элементов
+a {
+    color: $dark-brown;
+    text-decoration: none;
+    &:hover {
+        color: $light-brown;
+    }
+}
+
+.socials {
+    display: flex;
+    position: relative;
+    left: -10px;
+    top: 30px;
+    .social {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background-color: $brown;
+        &:not(:nth-child(1)) {
+            margin-left: 15px;
+        }
+        &:hover {
+            background-color: $light-brown;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .tg {
+            position: relative;
+            right: 1px;
+        }
+      }
+}
+
+  

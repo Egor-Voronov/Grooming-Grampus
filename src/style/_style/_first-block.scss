@@ -1,0 +1,197 @@
+.content {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0px 22px;
+  position: relative;
+  right: 20px;
+  top: 20px;
+}
+
+.navbar {
+  background-color: $gray;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  padding: 32px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+  padding: 10px 0;
+  background: $gray;
+}
+
+.navbar .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  color: #fff;
+  width: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar .menu-list {
+  display: inline-flex;
+  position: relative;
+  right: 10px;
+  
+}
+
+.menu-list li {
+  list-style: none;
+  &:not(:first-child) {
+    position: relative;
+    margin-left: -3px;
+    margin-top: 11px;
+  }
+}
+
+.menu-list li a {
+  @extend %regular2;
+  margin-left: 54px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+.menu-list li:last-child {
+  position: relative;
+  margin-top: -25px;
+}
+
+.banner {
+  height: 100vh;
+  background: url(../media/logo.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.about {
+  padding: 40px 0;
+}
+
+.about .title {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.about p {
+  padding-top: 20px;
+  text-align: justify;
+}
+
+.icon {
+  color: #fff;
+  width: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+.icon.cancel-btn {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+
+.navbar.sticky .icon.cancel-btn {
+  top: 10px;
+}
+
+.logo {
+  position: relative;
+  margin-top: -30px;
+}
+
+.phone-and-city {
+  text-align: right;
+  position: relative;
+  margin-left: 20px;
+  span {
+    .phone {
+      @extend %extrabold2;
+      color: $brown;
+      &:hover {
+        color: $light-brown;
+      }
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .city{
+      @extend %regular3;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    
+  }
+}
+
+@media (max-width: 868px) {
+  body.disabledScroll {
+    overflow: hidden;
+  }
+  .icon {
+    display: block;
+    height: 50px;
+    width: 50px;
+    z-index: 9;
+  }
+  .icon.cancel-btn {
+    display: none;
+  }
+  .icon.cancel-btn.show {
+    display: block;
+
+  }
+  .icon.hide {
+    display: none;
+  }
+  .navbar .menu-list {
+    position: fixed;
+    top: 0;
+    left: 0px;
+    height: 100vh;
+    width: 100%;
+    background: $gray;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    clip-path: circle(0px at calc(100% - 55px) calc(50% + 50px));
+    transition: all 0.3s ease;
+    }
+  .navbar .menu-list.active {
+    clip-path: circle(75%);
+  }
+  .navbar .menu-list li {
+    margin-top: 45px;
+  }
+
+  .xmark {
+    width: 50px;
+    height: 65px;
+    position: relative;
+    right: 0;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
+  .bars {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+  }
+
+  .logo {
+    position: relative;
+    z-index: 99;
+  }
+
+  .socials {
+    display: flex;
+    justify-self: center;
+  }
+}
