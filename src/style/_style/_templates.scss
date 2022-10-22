@@ -49,6 +49,7 @@ a {
     border-radius: 25px;
     @extend %regular3;
     color: white;
+    cursor: pointer;
 
     display: flex;
     justify-content: center;

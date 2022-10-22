@@ -24,11 +24,16 @@ window.onscroll = ()=>{
     window.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
 }
 
+//параллакс
+let scene = document.getElementById('parallax-container');
+let parallax = new Parallax(scene);
+
 // логика свайперов
 new Swiper('.banner', {
     loop: true,
     autoplay: {
-        delay: 5000,
+        delay: 10000,
     },
     speed: 1000,
+    slideToClickedSlide: false,
 })

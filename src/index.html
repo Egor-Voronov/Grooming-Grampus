@@ -7,6 +7,7 @@
     <title>Bentley — Grooming Studio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 </head>
 <body>
     <!-- панель навигации -->
@@ -27,63 +28,48 @@
               <a href="https://vk.com/bentley_groom" class="vk"><div class="social"><img src="media/vk.svg" alt="вк" class="social-img"></div></a>
             </div></li> 
           </ul>
-          <div class="phone-and-city"><span href="#"> <a href="#" class="phone"> +7 (911) 501-52-35</a> <br> <a href="#" class="city"> г.Вологда, ул. Зосимовская, дом 30</> </span></div>
+          <div class="phone-and-city"> <span class="phone"> +7 (911) 501-52-35</span> <br> <span class="city"> г.Вологда, ул. Зосимовская, дом 30 </span></div>
           <div class="icon menu-btn">
             <img src="media/bars.svg" alt="открыть меню" class="bars">
           </div>
         </div>
       </nav>
     <!-- оффер + слайдер -->
-    <div class="banner swiper-container">
-      <div class="swiper-wrapper">
+      <div class="banner swiper-container">
+        <div class="swiper-wrapper">
 
-        <div class="swiper-slide">
-          <div class="slide-image-div">
-            <div class="offer-container">
-            <h1 class="offer-h1">Первый СПА-салон
-              <br> для любимых хвостиков</h1>
-              <h2 class="offer-h2">Человеческий организм получает почти все необходимые
-                 вещества именно через пищу и воду. 
-                 С питанием связаны все жизненно важные функции организма. </h2>
-                 <button class="btn">
-                  <div class="btn-content">
-                    <img src="media/foot.svg" alt="лапка" class="btn-img">
-                    <div class="btn-txt">Записаться</div>
+          <div class="swiper-slide">
+            <div class="slide-image-div">
+              <div class="offer-container">
+              <h1 class="offer-h1">Первый СПА-салон
+                <br> для любимых хвостиков</h1>
+                <h2 class="offer-h2">Человеческий организм получает почти все необходимые
+                  вещества именно через пищу и воду. 
+                  С питанием связаны все жизненно важные функции организма. </h2>
+                  <a href="#"><button class="btn">
+                    <div class="btn-content">
+                      <img src="media/foot.svg" alt="лапка" class="btn-img">
+                      <div class="btn-txt">Записаться</div>
+                    </div>
+                  </button></a>
+              </div>
+              <div class="items">
+                <div class="items__inner" id="parallax-container">
+                  <img src="media/slide-main.png" alt="картинка на слайдере" class="main-slide">
+                    <div class="items__layer" data-depth="0.85">
+                        <div class="items__item">
+                          <img src="media/slide-background.png" alt="картинка на слайдере" class="slide-img">
+                        </div>
+                    </div>
                   </div>
-                 </button>
+                </div>
             </div>
-            <img src="media/slide-img.png" alt="картинка на слайдере" class="slide-img">
           </div>
-        </div>
 
-        <div class="swiper-slide">
-          <div class="slide-image-div">
-            <div class="offer-container">
-            <h1 class="offer-h1">Первый СПА-салон
-              <br> для любимых хвостиков</h1>
-              <h2 class="offer-h2">Человеческий организм получает почти все необходимые
-                 вещества именно через пищу и воду. 
-                 С питанием связаны все жизненно важные функции организма. </h2>
-                 <button class="btn">
-                  <div class="btn-content">
-                    <a href="" class="av">
-                    <img src="media/foot.svg" alt="лапка" class="btn-img">
-                    <div class="btn-txt">Записаться</div>
-                    </a>
-                  </div>
-                 </button>
-            </div>
-            <img src="media/slide-img.png" alt="картинка на слайдере" class="slide-img">
-          </div>
-        </div>
-
-      </div>     
-    </div>
+        </div>     
+      </div>
     <!-- второй блок -->
-    <div class="about">
-        <div class="content">
-            <div class="title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam dicta officiis aliquid repudiandae impedit earum nemo obcaecati fuga molestias ut quia libero doloremque sit explicabo, ipsum odio eos. Dolore consequuntur distinctio quibusdam veritatis neque?</div>
-        </div>
-    </div>
+    <div class="second-block-wrap"></div>
+
 </body>
 </html>
