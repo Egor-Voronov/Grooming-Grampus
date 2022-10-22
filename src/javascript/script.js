@@ -23,3 +23,12 @@ cancelBtn.onclick = ()=>{
 window.onscroll = ()=>{
     window.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
 }
+
+// логика свайперов
+new Swiper('.banner', {
+    loop: true,
+    autoplay: {
+        delay: 5000,
+    },
+    speed: 1000,
+})

@@ -5,39 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bentley — Grooming Studio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
     <!-- панель навигации -->
     <nav class="navbar">
         <div class="content">
-          <div class="logo"><a href="index.html"><img src="media/logo.svg" alt="logo" class="logo-img"></a></div>
+          <div class="logo"><a href="index.html"><img src="media/logo.svg" alt="логотип" class="logo-img"></a></div>
           <ul class="menu-list">
             <div class="icon cancel-btn">
-              <img src="media/xmark.svg" alt="xmark" class="xmark">
+              <img src="media/xmark.svg" alt="закрыть меню" class="xmark">
             </div>
             <li><a href="#">Наши услуги</a></li>
             <li><a href="#">О компании</a></li>
             <li><a href="#">Отзывы</a></li>
             <li><a href="#">Контакты</a></li>
-            <li><a href="#" class="socials">
-                <div href="#" class="social"><img src="media/telegram.svg" alt="telegram" class="social-img tg"></div>
-                <div href="#" class="social"><img src="media/whatsapp.svg" alt="whatsapp" class="social-img"></div>
-                <div href="#" class="social"><img src="media/vk.svg" alt="vk" class="social-img"></div>
-            </a></li> 
+            <li><div href="#" class="socials">
+              <a href="https://t.me/bentley_groom" class="telegram"><div class="social"><img src="media/telegram.svg" alt="telegram" class="social-img tg"></div></a>
+              <a href="https://api.whatsapp.com/send/?phone=79115015235&text&type=phone_number&app_absent=0" class="whatsapp"><div class="social"><img src="media/whatsapp.svg" alt="whatsapp" class="social-img"></div></a>
+              <a href="https://vk.com/bentley_groom" class="vk"><div class="social"><img src="media/vk.svg" alt="вк" class="social-img"></div></a>
+            </div></li> 
           </ul>
           <div class="phone-and-city"><span href="#"> <a href="#" class="phone"> +7 (911) 501-52-35</a> <br> <a href="#" class="city"> г.Вологда, ул. Зосимовская, дом 30</> </span></div>
           <div class="icon menu-btn">
-            <img src="media/bars.svg" alt="bars" class="bars">
+            <img src="media/bars.svg" alt="открыть меню" class="bars">
           </div>
         </div>
       </nav>
     <!-- оффер + слайдер -->
-    <div class="banner"></div>
+    <div class="banner swiper-container">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="slide-image-div">
+            <div class="offer-container">
+            <h1 class="offer-h1">Первый СПА-салон
+              <br> для любимых хвостиков</h1>
+              <h2 class="offer-h2">Человеческий организм получает почти все необходимые
+                 вещества именно через пищу и воду. 
+                 С питанием связаны все жизненно важные функции организма. </h2>
+                 <button class="btn">
+                  <div class="btn-content">
+                    <img src="media/foot.svg" alt="лапка" class="btn-img">
+                    <div class="btn-txt">Записаться</div>
+                  </div>
+                 </button>
+            </div>
+            <img src="media/slide-img.png" alt="картинка на слайдере" class="slide-img">
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slide-image-div">
+            <div class="offer-container">
+            <h1 class="offer-h1">Первый СПА-салон
+              <br> для любимых хвостиков</h1>
+              <h2 class="offer-h2">Человеческий организм получает почти все необходимые
+                 вещества именно через пищу и воду. 
+                 С питанием связаны все жизненно важные функции организма. </h2>
+                 <button class="btn">
+                  <div class="btn-content">
+                    <a href="" class="av">
+                    <img src="media/foot.svg" alt="лапка" class="btn-img">
+                    <div class="btn-txt">Записаться</div>
+                    </a>
+                  </div>
+                 </button>
+            </div>
+            <img src="media/slide-img.png" alt="картинка на слайдере" class="slide-img">
+          </div>
+        </div>
+
+      </div>     
+    </div>
+    <!-- второй блок -->
     <div class="about">
         <div class="content">
             <div class="title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam dicta officiis aliquid repudiandae impedit earum nemo obcaecati fuga molestias ut quia libero doloremque sit explicabo, ipsum odio eos. Dolore consequuntur distinctio quibusdam veritatis neque?</div>
         </div>
     </div>
-    
 </body>
 </html>

@@ -8,16 +8,15 @@
 }
 
 .navbar {
-  background-color: $gray;
-  position: fixed;
+  background-color: $gray;  
   z-index: 5;
-  width: 100%;
+  max-width: 100%;
   padding: 32px 0;
   transition: all 0.3s ease;
 }
 
 .navbar.sticky {
-  padding: 10px 0;
+  padding: 20px 0;
   background: $gray;
 }
 
@@ -62,11 +61,13 @@
 }
 
 .banner {
-  height: 100vh;
-  background: url(../media/logo.svg) no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  overflow: hidden;
+  .slide-image-div {
+    .slide-img {
+      background-color: $gray;
+      width: 100%;
+    }
+  }
 }
 
 .about {
@@ -129,26 +130,59 @@
   }
 }
 
-@media (max-width: 868px) {
+.swiper-slide {
+  cursor: auto;
+}
+
+.offer-container {
+  max-width: 540px;
+  position: absolute;
+
+  a {
+    position: relative;
+    display: block;
+    margin-top: 30px;
+  }
+}
+
+.offer-h1 {
+  @extend %extrabold1;
+  color: $brown;
+}
+
+.offer-h2 {
+  position: relative;
+  margin-top: 10px;
+  max-width: 435px;
+  @extend %regular3;
+  color: $dark-brown;
+}
+
+@media (max-width: 968px) {
   body.disabledScroll {
     overflow: hidden;
   }
+
   .icon {
     display: block;
     height: 50px;
     width: 50px;
     z-index: 9;
   }
+
   .icon.cancel-btn {
     display: none;
   }
+
   .icon.cancel-btn.show {
     display: block;
 
   }
+
   .icon.hide {
     display: none;
   }
+
   .navbar .menu-list {
     position: fixed;
     top: 0;
@@ -161,13 +195,17 @@
     text-align: center;
     clip-path: circle(0px at calc(100% - 55px) calc(50% + 50px));
     transition: all 0.3s ease;
+    z-index: 90;
     }
+
   .navbar .menu-list.active {
     clip-path: circle(75%);
   }
+
   .navbar .menu-list li {
     margin-top: 45px;
   }
+
 
   .xmark {
     width: 50px;
@@ -185,7 +223,7 @@
     right: 0;
   }
 
-  .logo {
+  .logo-img {
     position: relative;
     z-index: 99;
   }
@@ -194,4 +232,53 @@
     display: flex;
     justify-self: center;
   }
+
+  .menu-list {
+    li {
+      position: relative;
+      top: 50px;
+      .socials {
+        position: relative;
+      }
+    }
+  }
+
+  .phone-and-city {
+    z-index: 98;
+  }
 }
+
+@media screen and (max-width:968px) and (orientation: portrait){
+  .logo-img {
+    width: 127px;
+    height: 70px;
+  }
+
+  .phone-and-city {
+    position: relative;
+    right: 30px;
+  }
+
+  .phone-and-city span .phone {
+    font-size: calc($index * 1.5);
+  }
+
+  .phone-and-city span .city {
+    font-size: calc($index * 1.1);
+  }
+
+  .menu-list {
+    li {
+      position: relative;
+      top: 50px;
+      right: 20px;
+      .socials {
+        position: relative;
+        left: 27%;
+      }
+    }
+
+  }
+}
+
+.city {}

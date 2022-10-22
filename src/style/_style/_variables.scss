@@ -5,8 +5,11 @@ $light-brown: #C3A78E;
 $white: #F6F6F8;
 $gray: #D2D2DB;
 
-// заготовки шрифтов
+//расчет адаптивного размера
+$index: calc(1vw + 1vh);
+// font-size: calc($index * 1.8);
 
+// заготовки шрифтов
 %extrabold1 {
     font-family: "Circe-Extrabold";
     line-height: 50.4px;
