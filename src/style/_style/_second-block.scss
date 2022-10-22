@@ -1,3 +1,25 @@
-.second-block-wrap {
-    
+.second-block {
+    min-height: 50vh;
+}
+
+.title1 {
+    margin-top: 60px;
+}
+
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px 0px;
+
+    max-width: 1170px;
+
+    &-card {
+        width: 271px;
+        height: 373px;
+        background-color: bisque;
+    }
 }

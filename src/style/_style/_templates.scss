@@ -5,6 +5,26 @@
     box-sizing: border-box;
 }
 
+// ограничение контейнера
+.block {
+    display: flex;
+    justify-content: center;
+}
+
+.max-width-container {
+    width: 1170px;
+}
+
+// стили для переиспользуемого текста
+.title-txt {
+    color: $brown;
+    @extend %extrabold1;
+    display: flex;
+    justify-self: start;
+    position: relative;
+    margin-left: 4px;
+}
+
 // подключения шрифтов
 @font-face {
     font-family: "Circe-Extrabold";
