@@ -170,7 +170,7 @@
   height: 817px;
   display: flex;
   top: 0;
-  margin-left: 700px;
+  margin-left: 650px;
   z-index: 79;
 }
 
@@ -202,6 +202,10 @@
           position: static;
           background-color: $gray;
           width: 100%;
+        }
+        .main-slide {
+          height: 100vh;
+          object-fit: contain;
         }
       }
     }
