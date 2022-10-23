@@ -32,6 +32,7 @@
     height: 270px;
     background-color: $gray;
     border-radius: 25px;
+    overflow: hidden;
 
     transition: .3s linear;
 
@@ -51,5 +52,49 @@
             cx:135; cy:197; r:147;
             transition: .3s linear;
         }
+
+        .images-container {
+            .images-blur {
+                position: absolute;
+                z-index: 20;
+                display: block;
+                transition: .3s linear;
+            }
+        }
     }
 }
+
+
+
+    .images-container {
+        position: absolute;
+        margin-top: 43px;
+        margin-left: 20px;
+        width: 230px;
+        height: 270px;
+        overflow: hidden;
+        .images {
+            transition: .3s linear;
+            background-repeat: no-repeat;
+        }
+        .images-main {
+            position: absolute;
+            z-index: 20;
+            background-image: url(../media/spitz.png);
+            background-size: 100%;
+            width: 100%;
+            height: 100%;
+            z-index: 20;
+            transition: .3s linear;
+        }
+        .images-blur {
+            position: absolute;
+            z-index: 10;
+            background-image: url(../media/spitz-blur.png);
+            display: none;
+            background-size: 100%;
+            width: 100%;
+            height: 100%;
+            transition: .3s linear;
+        }
+    }
