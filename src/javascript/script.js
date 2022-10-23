@@ -1,32 +1,34 @@
 // импорты
 import '../style/style.scss'
 
+
 // логика поведения навигации
 const body = document.querySelector("body");
 const navbar = document.querySelector(".navbar");
 const menu = document.querySelector(".menu-list");
 const menuBtn = document.querySelector(".menu-btn");
 const cancelBtn = document.querySelector(".cancel-btn");
-menuBtn.onclick = ()=>{
+menuBtn.onclick = () => {
     menu.classList.add("active");
     menuBtn.classList.add("hide");
     cancelBtn.classList.add("show");
     body.classList.add("disabledScroll");
 }
-cancelBtn.onclick = ()=>{
+cancelBtn.onclick = () => {
     menu.classList.remove("active");
     menuBtn.classList.remove("hide");
     cancelBtn.classList.remove("show");
     body.classList.remove("disabledScroll");
 }
 
-window.onscroll = ()=>{
+window.onscroll = () => {
     window.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
 }
 
 //параллакс
 let scene = document.getElementById('parallax-container');
 let parallax = new Parallax(scene);
+
 
 // логика свайперов
 new Swiper('.banner', {
@@ -37,3 +39,25 @@ new Swiper('.banner', {
     speed: 1000,
     slideToClickedSlide: false,
 })
+
+// уменьшаю шрифт
+// /* Функция пересчёта размера шрифта */
+// function fGummaFontSize() {
+//     /* Увеличиваем размер шрифта, до появления прокрутки */
+//     while (this.scrollHeight <= this.clientHeight || this.scrollWidth <= this.clientWidth) {
+//       this.style.fontSize = parseFloat(getComputedStyle(this).fontSize) + 2 + "px";
+//     }
+//     /* Уменьшаем размер шрифта, пока прокрутка не исчезнет */
+//     while ( this.scrollHeight > this.clientHeight || this.scrollWidth > this.clientWidth ) {
+//       this.style.fontSize = parseFloat(getComputedStyle(this).fontSize) - 1 + "px";
+//     }
+//   }
+  
+//   /* Функция обхода всех элементов с нужным классом */
+//   function fGummaResizeAll() {
+//     document.querySelectorAll(".gumma").forEach(el => fGummaFontSize.call(el));
+//   }
+  
+//   document.querySelectorAll(".gumma").forEach(el => el.addEventListener("input", fGummaFontSize));
+//   window.onload = fGummaResizeAll; // Запуск после загрузки контента
+//   window.onresize = fGummaResizeAll; // Запуск при изменении размеров окна и контейнеров

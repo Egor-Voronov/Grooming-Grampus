@@ -19,7 +19,34 @@
 
     &-card {
         width: 271px;
-        height: 373px;
-        background-color: bisque;
+        min-height: 373px;
+        border: 2px solid black;
+
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.img-container {
+    width: 270px;
+    height: 270px;
+    background-color: $gray;
+    border-radius: 25px;
+
+    transition: .3s linear;
+
+    &:hover {
+        background-color: $brown;
+        transition: .3s linear;
+        .card-2-circles {
+            fill: $light-brown;
+            stroke: $light-brown;
+            transition: .3s linear;
+        }
+        
+        .bottom-circle {
+            fill: url(#paint0_radial_172_353) #fff;
+            transition: .3s linear;
+        }
     }
 }
