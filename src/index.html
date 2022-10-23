@@ -11,31 +11,33 @@
 </head>
 <body>
     <!-- панель навигации -->
-    <nav class="navbar">
-        <div class="content">
-          <div class="logo"><a href="index.html"><img src="media/logo.svg" alt="логотип" class="logo-img"></a></div>
-          <ul class="menu-list">
-            <div class="icon cancel-btn">
-              <img src="media/xmark.svg" alt="закрыть меню" class="xmark">
+    <header>
+      <nav class="navbar">
+          <div class="content">
+            <div class="logo"><a href="index.html"><img src="media/logo.svg" alt="логотип" class="logo-img"></a></div>
+            <ul class="menu-list">
+              <div class="icon cancel-btn">
+                <img src="media/xmark.svg" alt="закрыть меню" class="xmark">
+              </div>
+              <li><a href="#">Наши услуги</a></li>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Отзывы</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><div href="#" class="socials">
+                <a href="https://t.me/bentley_groom" class="telegram"><div class="social"><img src="media/telegram.svg" alt="telegram" class="social-img tg"></div></a>
+                <a href="https://api.whatsapp.com/send/?phone=79115015235&text&type=phone_number&app_absent=0" class="whatsapp"><div class="social"><img src="media/whatsapp.svg" alt="whatsapp" class="social-img"></div></a>
+                <a href="https://vk.com/bentley_groom" class="vk"><div class="social"><img src="media/vk.svg" alt="вк" class="social-img"></div></a>
+              </div></li> 
+            </ul>
+            <div class="phone-and-city"> <span class="phone"> +7 (911) 501-52-35</span> <br> <span class="city"> г.Вологда, ул. Зосимовская, дом 30 </span></div>
+            <div class="icon menu-btn">
+              <img src="media/bars.svg" alt="открыть меню" class="bars">
             </div>
-            <li><a href="#">Наши услуги</a></li>
-            <li><a href="#">О компании</a></li>
-            <li><a href="#">Отзывы</a></li>
-            <li><a href="#">Контакты</a></li>
-            <li><div href="#" class="socials">
-              <a href="https://t.me/bentley_groom" class="telegram"><div class="social"><img src="media/telegram.svg" alt="telegram" class="social-img tg"></div></a>
-              <a href="https://api.whatsapp.com/send/?phone=79115015235&text&type=phone_number&app_absent=0" class="whatsapp"><div class="social"><img src="media/whatsapp.svg" alt="whatsapp" class="social-img"></div></a>
-              <a href="https://vk.com/bentley_groom" class="vk"><div class="social"><img src="media/vk.svg" alt="вк" class="social-img"></div></a>
-            </div></li> 
-          </ul>
-          <div class="phone-and-city"> <span class="phone"> +7 (911) 501-52-35</span> <br> <span class="city"> г.Вологда, ул. Зосимовская, дом 30 </span></div>
-          <div class="icon menu-btn">
-            <img src="media/bars.svg" alt="открыть меню" class="bars">
           </div>
-        </div>
-      </nav>
-    <!-- оффер + слайдер -->
-      <div class="banner swiper-container">
+        </nav>
+    </header>
+    <!-- второй блок - оффер + слайдер -->
+      <section class="banner swiper-container">
         <div class="swiper-wrapper">
 
           <div class="swiper-slide">
@@ -67,16 +69,18 @@
           </div>
 
         </div>     
-      </div>
-    <!-- второй блок -->
-    <div class="second-block block">
+      </section>
+    <!-- третий блок -->
+    <section class="second-block block">
       <div class="max-width-container">
         <h2 class="title-txt title1">Наши услуги</h2>
 
         <div class="services">
+
           <a ><div class="services-card">
             <div class="img-container">
-              <svg width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+              <svg class="card-svg" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <mask id="mask0_1783_140" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="270" height="270">
                   <rect width="270" height="270" rx="25" fill="#D2D2DB"/>
                   </mask>
@@ -89,12 +93,17 @@
                     <stop offset="1" stop-color="#C3A78E" stop-opacity="0"/>
                   </radialGradient>
                   </g>
+
+                  <img src="" alt="померанский шпиц" class="card-main">
+                  <img src="" alt="" class="card-blur">
+
               </svg>
             </div>
             
 
 
           </div></a>
+
           <div class="services-card"></div>
           <div class="services-card"></div>
           <div class="services-card"></div>
@@ -105,7 +114,7 @@
         </div>
       </div>
 
-    </div>
+    </section>
 
 </body>
 </html>

@@ -1,7 +1,6 @@
 // импорты
 import '../style/style.scss'
 
-
 // логика поведения навигации
 const body = document.querySelector("body");
 const navbar = document.querySelector(".navbar");
@@ -29,8 +28,7 @@ window.onscroll = () => {
 let scene = document.getElementById('parallax-container');
 let parallax = new Parallax(scene);
 
-
-// логика свайперов
+// логика свайпера
 new Swiper('.banner', {
     loop: true,
     autoplay: {
