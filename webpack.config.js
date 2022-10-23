@@ -36,6 +36,20 @@ module.exports = {
             //     use: [MiniCssExtractPlugin.loader, 'css-loader'],
             // },
             {
+                test: /\.(woff|woff2|ttf|otf|eot)$/,
+                type: 'asset/resource',
+                generator: {
+                filename: 'assets/fonts/[name][ext]'
+                } 
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg|ico)$/,
+                type: 'asset/resource',
+                generator: {
+                  filename: 'assets/img/[name][ext]'
+                } 
+            },
+            {
                 test: /\.s[ac]ss$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
             },
