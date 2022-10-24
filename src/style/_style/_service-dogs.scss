@@ -1,31 +1,31 @@
 .card2 {
-    margin-top: 48.1px;
-    margin-left: 20px;
+    margin-top: 25.1px;
+    margin-left: 10px;
 
     .images-main {
         background-image: url(../media/corgi.png);
-        background-size: 100%;
+        background-size: 110%;
     }
 
     .images-blur {
         background-image: url(../media/corgi-blur.png);
-        background-size: 100%;
-        margin-left: -3px;
-        margin-top: -4px;  
+        background-size: 110%;
+        margin-left: -4px;
+        margin-top: -2px;  
         }
     }
 
     .card3 {
-        margin-top: 55.6px;
-        margin-left: 20px;
+        margin-top: 35px;
+        margin-left: 5px;
         .images-main {
             background-image: url(../media/terrier.png);
-            background-size: 100%;
+            background-size: 110%;
         }
 
         .images-blur {
             background-image: url(../media/terrier-blur.png);
-            background-size: 100%;
+            background-size: 110%;
             margin-top: -5px;
             width: 100%;
             height: 110%;
@@ -33,15 +33,15 @@
     }
 
     .card4 {
-        margin-top: 59.1px;
-        margin-left: 20px;
+        margin-top: 34.1px;
+        margin-left: 10px;
         .images-main {
             background-image: url(../media/spaniel.png);
-            background-size: 100%;
+            background-size: 112%;
         }
         .images-blur {
             background-image: url(../media/spaniel-blur.png);
-            background-size: 100%;
+            background-size: 112%;
             margin-top: -8px;
             width: 97%;
         }
@@ -63,17 +63,17 @@
     }
 
     .card6 {
-        margin-top: 59.1px;
-        margin-left: 20px;
+        margin-top: 37.1px;
+        margin-left: 0px;
         .images-main {
             background-image: url(../media/york.png);
-            background-size: 100%;
+            background-size: 110%;
         }
 
         .images-blur {
             background-image: url(../media/york-blur.png);
-            background-size: 100%;
-            margin-top: -8px;
+            background-size: 110%;
+            margin-top: -18px;
             margin-left: 5px;
             width: 97%;
         }
@@ -114,3 +114,23 @@
         }
     }
 
+@media screen and (max-width:968px) {  //and (orientation: portrait)
+    .max-width-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .services {
+        gap: 30px;
+        justify-content: space-around;
+    }
+}
+
+// @media screen and (max-width:968px) and (orientation: portrait) {
+//     .max-width-container {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//     }
+// }
