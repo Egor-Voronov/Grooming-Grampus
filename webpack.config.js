@@ -24,10 +24,10 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'style.css'
         }),
-        //закомментить, чтобы css не минифицировать
+        //закомментить, чтобы css минифицировать
         // new CssMinimizerWebpackPlugin(),
         // new TerserWebpackPlugin()
-        //закомментить, чтобы css не минифицировать
+        //закомментить, чтобы css минифицировать
     ],
     module: {
         rules: [

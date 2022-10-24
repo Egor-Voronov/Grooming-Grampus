@@ -72,6 +72,7 @@ a {
     @extend %regular3;
     color: white;
     cursor: pointer;
+    border: none;
 
     display: flex;
     justify-content: center;
@@ -79,8 +80,7 @@ a {
 
     width: 225px;
     height: 50px;
-
-    border: none;
+    position: absolute;
     
     transition: .2s linear;
 
