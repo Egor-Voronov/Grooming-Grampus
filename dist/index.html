@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bentley — Grooming Studio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <link rel="shortcut icon" href="media/foot.svg" type="image/x-icon">
+<link href="style.css" rel="stylesheet"></head>
+<body>
+    <!-- панель навигации -->
+    <header>
+      <nav class="navbar">
+          <div class="content">
+            <div class="logo"><a href="index.html"><img src="media/logo.svg" alt="логотип" class="logo-img"></a></div>
+            <ul class="menu-list">
+              <div class="icon cancel-btn">
+                <img src="media/xmark.svg" alt="закрыть меню" class="xmark">
+              </div>
+              <li><a href="#">Наши услуги</a></li>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Отзывы</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><div href="#" class="socials">
+                <a href="https://t.me/bentley_groom" class="telegram"><div class="social"><img src="media/telegram.svg" alt="telegram" class="social-img tg"></div></a>
+                <a href="https://api.whatsapp.com/send/?phone=79115015235&text&type=phone_number&app_absent=0" class="whatsapp"><div class="social"><img src="media/whatsapp.svg" alt="whatsapp" class="social-img"></div></a>
+                <a href="https://vk.com/bentley_groom" class="vk"><div class="social"><img src="media/vk.svg" alt="вк" class="social-img"></div></a>
+              </div></li> 
+            </ul>
+            <div class="phone-and-city"> <span class="phone"> +7 (911) 501-52-35</span> <br> <span class="city"> г.Вологда, ул. Зосимовская, дом 30 </span></div>
+            <div class="icon menu-btn">
+              <img src="media/bars.svg" alt="открыть меню" class="bars">
+            </div>
+          </div>
+        </nav>
+    </header>
+    <!-- второй блок - оффер + слайдер -->
+      <section class="banner swiper-container">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="slide-image-div">
+              <div class="offer-container">
+              <h1 class="offer-h1">Первый СПА-салон
+                <br> для любимых хвостиков</h1>
+                <h2 class="offer-h2">Человеческий организм получает почти все необходимые
+                  вещества именно через пищу и воду. 
+                  С питанием связаны все жизненно важные функции организма. </h2>
+                  <a href="#"><button class="btn">
+                    <div class="btn-content">
+                      <img src="media/foot.svg" alt="лапка" class="btn-img">
+                      <div class="btn-txt">Записаться</div>
+                    </div>
+                  </button></a>
+              </div>
+              <div class="items">
+                <div class="items__inner" id="parallax-container">
+                  <img src="media/slide-main.png" alt="картинка на слайдере" class="main-slide">
+                    <div class="items__layer" data-depth="0.85">
+                        <div class="items__item">
+                          <img src="media/slide-background.png" alt="картинка на слайдере" class="slide-img">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+        </div>     
+      </section>
+    <!-- третий блок -->
+    <div class="background-wrapper">
+    <section class="second-block block">
+      <div class="max-width-container">
+        <h2 class="title-txt title1">Наши услуги</h2>
+
+        <div class="services">
+          <!-- 1 карточка -->
+          <a href="#"><div class="services-card">
+            <div class="img-container">
+              <div class="images-container">
+                <div class="images images-blur"></div>
+                <div class="images images-main"></div>
+              </div>
+              <svg class="card-svg" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_1783_140" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="270" height="270">
+                  <rect width="270" height="270" rx="25" fill="#D2D2DB"/>
+                  </mask>
+                  <g mask="url(#mask0_1783_140)">
+                  <circle class="bottom-circle" cx="135" cy="270" r="159" fill="#C3C4D0"/>
+                  <ellipse class="card-2-circles" cx="256.5" cy="16" rx="33.5" ry="34" fill="#ECECF9"/>
+                  <circle class="card-2-circles" cx="225" cy="46" r="8.5" fill="#ECECF9" stroke="#ECECF9" stroke-width="3"/>
+                  <radialGradient id="paint0_radial_172_353" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(135 21.5) rotate(90) scale(352.5)">
+                    <stop stop-color="#C3A78E"/>
+                    <stop offset="1" stop-color="#C3A78E" stop-opacity="0"/>
+                  </radialGradient>
+                  </g>
+              </svg>
+            </div>
+            <div class="card-txt-container">
+              <h1 class="card-title">Померанский шпиц</h1>
+              <div class="card-description">
+                <p class="card-description-txt">От 1200 р.</p>
+                <img src="media/arrow-right.svg" alt="открыть карточку" class="card-arrow">
+              </div>
+            </div>
+          </div></a>
+          <!-- 2 карточка -->
+          <a href="#"><div class="services-card">
+            <div class="img-container">
+              <div class="images-container card2">
+                <div class="images images-blur"></div>
+                <div class="images images-main"></div>
+              </div>
+              <svg class="card-svg" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_1783_140" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="270" height="270">
+                  <rect width="270" height="270" rx="25" fill="#D2D2DB"/>
+                  </mask>
+                  <g mask="url(#mask0_1783_140)">
+                  <circle class="bottom-circle" cx="135" cy="270" r="159" fill="#C3C4D0"/>
+                  <ellipse class="card-2-circles" cx="256.5" cy="16" rx="33.5" ry="34" fill="#ECECF9"/>
+                  <circle class="card-2-circles" cx="225" cy="46" r="8.5" fill="#ECECF9" stroke="#ECECF9" stroke-width="3"/>
+                  <radialGradient id="paint0_radial_172_353" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(135 21.5) rotate(90) scale(352.5)">
+                    <stop stop-color="#C3A78E"/>
+                    <stop offset="1" stop-color="#C3A78E" stop-opacity="0"/>
+                  </radialGradient>
+                  </g>
+              </svg>
+            </div>
+            <div class="card-txt-container">
+              <h1 class="card-title">Корги</h1>
+              <div class="card-description">
+                <p class="card-description-txt">От 1200 р.</p>
+                <img src="media/arrow-right.svg" alt="открыть карточку" class="card-arrow">
+              </div>
+            </div>
+          </div></a>
+          <!-- 3 карточка -->
+          <a href="#"><div class="services-card">
+            <div class="img-container">
+              <div class="images-container card3">
+                <div class="images images-blur"></div>
+                <div class="images images-main"></div>
+              </div>
+              <svg class="card-svg" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_1783_140" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="270" height="270">
+                  <rect width="270" height="270" rx="25" fill="#D2D2DB"/>
+                  </mask>
+                  <g mask="url(#mask0_1783_140)">
+                  <circle class="bottom-circle" cx="135" cy="270" r="159" fill="#C3C4D0"/>
+                  <ellipse class="card-2-circles" cx="256.5" cy="16" rx="33.5" ry="34" fill="#ECECF9"/>
+                  <circle class="card-2-circles" cx="225" cy="46" r="8.5" fill="#ECECF9" stroke="#ECECF9" stroke-width="3"/>
+                  <radialGradient id="paint0_radial_172_353" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(135 21.5) rotate(90) scale(352.5)">
+                    <stop stop-color="#C3A78E"/>
+                    <stop offset="1" stop-color="#C3A78E" stop-opacity="0"/>
+                  </radialGradient>
+                  </g>
+              </svg>
+            </div>
+            <div class="card-txt-container">
+              <h1 class="card-title">Йоркширский терьер</h1>
+              <div class="card-description">
+                <p class="card-description-txt">От 1200 р.</p>
+                <img src="media/arrow-right.svg" alt="открыть карточку" class="card-arrow">
+              </div>
+            </div>
+          </div></a>
+          <!-- 4 карточка -->
+          <a href="#"><div class="services-card">
+            <div class="img-container">
+              <div class="images-container card4">
+                <div class="images images-blur"></div>
+                <div class="images images-main"></div>
+              </div>
+              <svg class="card-svg" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_1783_140" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="270" height="270">
+                  <rect width="270" height="270" rx="25" fill="#D2D2DB"/>
+                  </mask>
+                  <g mask="url(#mask0_1783_140)">
+                  <circle class="bottom-circle" cx="135" cy="270" r="159" fill="#C3C4D0"/>
+                  <ellipse class="card-2-circles" cx="256.5" cy="16" rx="33.5" ry="34" fill="#ECECF9"/>
+                  <circle class="card-2-circles" cx="225" cy="46" r="8.5" fill="#ECECF9" stroke="#ECECF9" stroke-width="3"/>
+                  <radialGradient id="paint0_radial_172_353" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(135 21.5) rotate(90) scale(352.5)">
+                    <stop stop-color="#C3A78E"/>
+                    <stop offset="1" stop-color="#C3A78E" stop-opacity="0"/>
+                  </radialGradient>
+                  </g>
+              </svg>
+            </div>
+            <div class="card-txt-container">
+              <h1 class="card-title">Спаниель</h1>
+              <div class="card-description">
+                <p class="card-description-txt">От 1200 р.</p>
+                <img src="media/arrow-right.svg" alt="открыть карточку" class="card-arrow">
+              </div>
+            </div>
+          </div></a>
+          <!-- 5 карточка -->
+          <a href="#"><div class="services-card">
+            <div class="img-container">
+              <div class="images-container card5">
+                <div class="images images-blur"></div>
+                <div class="images images-main"></div>
+              </div>
+              <svg class="card-svg" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_1783_140" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="270" height="270">
+                  <rect width="270" height="270" rx="25" fill="#D2D2DB"/>
+                  </mask>
+                  <g mask="url(#mask0_1783_140)">
+                  <circle class="bottom-circle" cx="135" cy="270" r="159" fill="#C3C4D0"/>
+                  <ellipse class="card-2-circles" cx="256.5" cy="16" rx="33.5" ry="34" fill="#ECECF9"/>
+                  <circle class="card-2-circles" cx="225" cy="46" r="8.5" fill="#ECECF9" stroke="#ECECF9" stroke-width="3"/>
+                  <radialGradient id="paint0_radial_172_353" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(135 21.5) rotate(90) scale(352.5)">
+                    <stop stop-color="#C3A78E"/>
+                    <stop offset="1" stop-color="#C3A78E" stop-opacity="0"/>
+                  </radialGradient>
+                  </g>
+              </svg>
+            </div>
+            <div class="card-txt-container">
+              <h1 class="card-title">Болонка</h1>
+              <div class="card-description">
+                <p class="card-description-txt">От 1200 р.</p>
+                <img src="media/arrow-right.svg" alt="открыть карточку" class="card-arrow">
+              </div>
+            </div>
+          </div></a>
+          <!-- 6 карточка -->
+          <a href="#"><div class="services-card">
+            <div class="img-container">
+              <div class="images-container card6">
+                <div class="images images-blur"></div>
+                <div class="images images-main"></div>
+              </div>
+              <svg class="card-svg" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_1783_140" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="270" height="270">
+                  <rect width="270" height="270" rx="25" fill="#D2D2DB"/>
+                  </mask>
+                  <g mask="url(#mask0_1783_140)">
+                  <circle class="bottom-circle" cx="135" cy="270" r="159" fill="#C3C4D0"/>
+                  <ellipse class="card-2-circles" cx="256.5" cy="16" rx="33.5" ry="34" fill="#ECECF9"/>
+                  <circle class="card-2-circles" cx="225" cy="46" r="8.5" fill="#ECECF9" stroke="#ECECF9" stroke-width="3"/>
+                  <radialGradient id="paint0_radial_172_353" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(135 21.5) rotate(90) scale(352.5)">
+                    <stop stop-color="#C3A78E"/>
+                    <stop offset="1" stop-color="#C3A78E" stop-opacity="0"/>
+                  </radialGradient>
+                  </g>
+              </svg>
+            </div>           
+            <div class="card-txt-container">
+              <h1 class="card-title">Бивер-Йорк</h1>
+              <div class="card-description">
+                <p class="card-description-txt">От 1200 р.</p>
+                <img src="media/arrow-right.svg" alt="открыть карточку" class="card-arrow">
+              </div>
+            </div>
+          </div></a>
+          <!-- 7 карточка -->
+          <a href="#"><div class="services-card">
+            <div class="img-container">
+              <div class="images-container card7">
+                <div class="images images-blur"></div>
+                <div class="images images-main"></div>
+              </div>
+              <svg class="card-svg" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_1783_140" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="270" height="270">
+                  <rect width="270" height="270" rx="25" fill="#D2D2DB"/>
+                  </mask>
+                  <g mask="url(#mask0_1783_140)">
+                  <circle class="bottom-circle" cx="135" cy="270" r="159" fill="#C3C4D0"/>
+                  <ellipse class="card-2-circles" cx="256.5" cy="16" rx="33.5" ry="34" fill="#ECECF9"/>
+                  <circle class="card-2-circles" cx="225" cy="46" r="8.5" fill="#ECECF9" stroke="#ECECF9" stroke-width="3"/>
+                  <radialGradient id="paint0_radial_172_353" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(135 21.5) rotate(90) scale(352.5)">
+                    <stop stop-color="#C3A78E"/>
+                    <stop offset="1" stop-color="#C3A78E" stop-opacity="0"/>
+                  </radialGradient>
+                  </g>
+              </svg>
+            </div>
+            <div class="card-txt-container">
+              <h1 class="card-title">Пудель</h1>
+              <div class="card-description">
+                <p class="card-description-txt">От 1200 р.</p>
+                <img src="media/arrow-right.svg" alt="открыть карточку" class="card-arrow">
+              </div>
+            </div>
+          </div></a>
+          <!-- 8 карточка -->
+          <a href="#"><div class="services-card">
+            <div class="img-container">
+              <div class="images-container card8">
+                <div class="images images-blur"></div>
+                <div class="images images-main"></div>
+              </div>
+              <svg class="card-svg" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_1783_140" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="270" height="270">
+                  <rect width="270" height="270" rx="25" fill="#D2D2DB"/>
+                  </mask>
+                  <g mask="url(#mask0_1783_140)">
+                  <circle class="bottom-circle" cx="135" cy="270" r="159" fill="#C3C4D0"/>
+                  <ellipse class="card-2-circles" cx="256.5" cy="16" rx="33.5" ry="34" fill="#ECECF9"/>
+                  <circle class="card-2-circles" cx="225" cy="46" r="8.5" fill="#ECECF9" stroke="#ECECF9" stroke-width="3"/>
+                  <radialGradient id="paint0_radial_172_353" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(135 21.5) rotate(90) scale(352.5)">
+                    <stop stop-color="#C3A78E"/>
+                    <stop offset="1" stop-color="#C3A78E" stop-opacity="0"/>
+                  </radialGradient>
+                  </g>
+              </svg>
+            </div>
+            <div class="card-txt-container">
+              <h1 class="card-title">Кошки</h1>
+              <div class="card-description">
+                <p class="card-description-txt">От 1200 р.</p>
+                <img src="media/arrow-right.svg" alt="открыть карточку" class="card-arrow">
+              </div>
+            </div>
+          </div></a>
+        </div>
+      </div>
+    </section>
+
+        <!-- прайсы -->
+        <section class="second-block block">
+          <div class="max-width-container">
+            <div class="prices-wrap">
+              <div class="prices">
+                <!-- прайс-лист 1 -->
+                <a>
+                  <div class="prices-item">
+                    <div class="prices-img-container">
+                      <img src="media/price-img1.svg" alt="картинка собаки декоративной породы" class="prices-img">
+                    </div>
+                    <div class="price-txt">
+                      <h1 class="price-name">Прайс-лист на декоративные породы</h1>
+                      <p class="price-description">Комплексный уход за небольшими декоративными породами</p>
+                    </div>
+                    <div class="download-container">
+                    <a href="media/услуги на декоративные породы.pdf" download="" class="download"><img src="media/download.svg" alt="скачать документ
+                      с описанием услуг на декоративные породы" class="download-img"></a></div>
+                </div>
+              </a>
+              <!-- прайс-лист 2 -->
+              <a>
+                <div class="prices-item">
+                  <div class="prices-img-container">
+                    <img src="media/price-img2.svg" alt="картинка собаки декоративной породы" class="prices-img">
+                  </div>
+                  <div class="price-txt">
+                    <h1 class="price-name">Прайс-лист на жесткошёрстные породы</h1>
+                    <p class="price-description">Комплексный уход за вашими друзьями</p>
+                  </div>
+                  <div class="download-container">
+                    <a href="media/услуги на жесткошерстые породы.pdf" download="" class="download"><img src="media/download.svg" alt="скачать документ
+                      с описанием услуг на декоративные породы" class="download-img"></a></div> 
+              </div>
+            </a>
+            <!-- прайс-лист 3 -->
+            <a>
+              <div class="prices-item">
+                <div class="prices-img-container">
+                  <img src="media/price-img3.svg" alt="картинка собаки декоративной породы" class="prices-img">
+                </div>
+                <div class="price-txt">
+                  <h1 class="price-name">Прайс-лист на <br> крупные породы</h1>
+                  <p class="price-description">Комплексный уход за крупными собаками</p>
+                </div>
+                <div class="download-container">
+                  <a href="media/услуги на крупные породы.pdf" download="" class="download"><img src="media/download.svg" alt="скачать документ
+                    с описанием услуг на декоративные породы" class="download-img"></a></div>    
+            </div>
+          </a>
+              </div>
+          </div>
+      </div>
+  </section>
+</div>
+  
+<script defer src="bundle.js"></script></body>
+</html>
