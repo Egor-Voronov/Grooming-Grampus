@@ -52,7 +52,8 @@
     // padding-right: 50px;
     // padding-bottom: 44px;
     padding: 44px 50px 44px 70px;
-    border-radius: 25px;
+    border-radius:25px;
+    
     .img-container {
         width: 230px;
         height: 230px;
@@ -102,6 +103,8 @@
     position: relative;
     margin-right: 5px;
     margin-top: 2px;
+
+    max-width: 389px;
 }
 
 .popup-description {
@@ -118,11 +121,14 @@
         position: relative;
         margin-left: 4px;
         margin-top: 8px;
+        max-width: 389px;
     }
     ul {
         position: relative;
         margin-left: 27px;
         margin-top: 1px;
+
+        max-width: 389px;
     }
     ul li::marker {
         font-size: 10px;
@@ -173,6 +179,7 @@
 .popup-footer {
     padding-left: 0 10px;
     margin-top: 11px;
+    bottom: 0;
 
     position: relative;
 
@@ -235,6 +242,8 @@
         color: rgba($color: $dark-brown, $alpha: .3);
         line-height: 16px;
         font-size: 16px;
+
+        max-width: 330px;
         a {
             color: rgba($color: $dark-brown, $alpha: .3);
             font-size: 16px;
@@ -288,5 +297,103 @@
 #popup8 {
     .images {
         background-size: 83%;
+    }
+}
+
+@media screen and (max-width:777px) { 
+    .popup-content {
+        min-width: 100vw;
+        border-radius:25px 25px 0 0;
+
+        .popup-header {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .popup-block1 {
+            flex-direction: column;
+            align-items: center;
+            
+            .popup-title {
+
+            }
+
+            .popup-description {
+                flex-direction: column;
+                align-items: center;
+                justify-self: center;
+            }
+        }
+
+        .popup-block2 {
+            flex-direction: column;
+            align-items: center;
+            display: flex;
+            .popup-pricing {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .card-svg {
+            min-width: 232px;
+        }
+
+        .footer-background {
+            min-width: 100vw;
+            max-width: 100vw;
+            padding: 0;
+            padding-left: 25px;
+            padding-bottom: 40px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            .popup-footer {
+                flex-direction: column;
+                align-items: center;
+
+                h2 {
+                    max-width: 90vw;
+                }
+
+                .footer-inputs {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .footer-descriptions {
+                    flex-direction: column;
+                    align-items: center;
+                    .btn {
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#popup-confidence {
+    .popup-content {
+        padding: 44px 50px;
+        align-items: center;
+        justify-content: center;
+        min-width: 0;
+        width: auto;
+        .popup-title {
+            justify-items: center;
+            align-self: center;
+            min-width: auto;
+            width: auto;
+            max-width: 700px;
+        }
+        p {
+            position: relative;
+            margin-top: 30px;
+
+            max-width: 827px;
+        }
     }
 }
