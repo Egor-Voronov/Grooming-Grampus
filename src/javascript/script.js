@@ -39,32 +39,38 @@ new Swiper('.banner', {
 });
 
 // плавный скролл
-const anchors = document.querySelectorAll('.nav-li[href*="#"]');
+const anchors = [].slice.call(document.querySelectorAll('.nav-li[href*="#"]')),
+      animationTime = 700,
+      framesCount = 50;
 
-for (let anchor of anchors) {
-  anchor.addEventListener('click', function (e) {
+anchors.forEach(function(item) {
+  item.addEventListener('click', function(e) {
     e.preventDefault();
-    
-    const blockID = anchor.getAttribute('href').substr(1);
-    
-    document.getElementById(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
+    let coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
+    let scroller = setInterval(function() {
+      let scrollBy = coordY / framesCount;
+  
+      if(scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
+        window.scrollBy(0, scrollBy);
+      } else {
+        window.scrollTo(0, coordY);
+        clearInterval(scroller);
+      }
+    }, animationTime / framesCount);
   });
-};
+});
 
 // загрузка изображений в оффере
 window.onload = () => {
-  const uploadFile = document.getElementById("files");
-  const uploadBtn = document.getElementById("upload-btn");
-  const uploadText = document.getElementById("upload-txt");
+  const uploadFile = document.getElementById('files');
+  const uploadBtn = document.getElementById('upload-btn');
+  const uploadText = document.getElementById('upload-txt');
 
-  uploadBtn.addEventListener("click", function () {
+  uploadBtn.addEventListener('click', function () {
     uploadFile.click();
   }) 
 
-  uploadFile.addEventListener("change", function () {
+  uploadFile.addEventListener('change', function () {
     if (uploadFile.value) {
       uploadText.innerText = uploadFile.value.match(/[\/\\]([\w\d\s\.\-(\)]+)$/)[1];
     } else {
@@ -74,7 +80,7 @@ window.onload = () => {
 };
 
 document.getElementById('files').onchange = function () {
-  var src = URL.createObjectURL(this.files[0]);
+  let src = URL.createObjectURL(this.files[0]);
   document.getElementById('image').src = src;
 }
 
@@ -94,5 +100,5 @@ function handleFileSelect (evt) {
 document.getElementById('files').addEventListener('change', handleFileSelect, false);
 
 // защитная мера, от возможных, следующих нечестных соискателей)
-console.log("Данное тестовое задание выполнил Воронов Егор")
+console.log('Данное тестовое задание выполнил Воронов Егор')
 

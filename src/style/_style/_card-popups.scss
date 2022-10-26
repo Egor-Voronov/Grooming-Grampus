@@ -396,10 +396,42 @@
             width: auto;
             max-width: 700px;
         }
+
+        p {
+            position: relative;
+            margin-top: 30px;
+
+            @extend %light;
+            color: #000;
+
+            max-width: 727px;
+            
+            span {
+                @extend %regular3;
+                font-weight: 400;
+                font-size: 16px;
+            }
+        }
        
     }
 }
 
 .popup-close-absolute {
     position: absolute;
+}
+
+@media screen and (max-width:777px) {
+    #popup-confidence {
+        .popup-title {
+            font-size: 25px;
+            line-height: 25px;
+            max-width: 200px;
+            min-width: 200px;
+            width: 200px;
+        }
+        p {
+            position: relative;
+            margin-top: 30px;
+        }
+    }
 }
