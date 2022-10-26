@@ -40,7 +40,6 @@
     <!-- второй блок - оффер + слайдер -->
       <main class="banner swiper-container">
         <div class="swiper-wrapper">
-
           <div class="swiper-slide">
             <div class="slide-image-div">
               <div class="offer-container">
@@ -49,7 +48,7 @@
                 <h2 class="offer-h2">Человеческий организм получает почти все необходимые
                   вещества именно через пищу и воду. 
                   С питанием связаны все жизненно важные функции организма. </h2>
-                  <a href="#"><button class="btn">
+                  <a href="#offer-popup"><button class="btn">
                     <div class="btn-content">
                       <img src="media/foot.svg" alt="лапка" class="btn-img">
                       <div class="btn-txt">Записаться</div>
@@ -68,9 +67,39 @@
                 </div>
             </div>
           </div>
+        </div>
+      </main>
+      <!-- попал в оффере -->
+      <div id="offer-popup" class="popup">
+        <a href="#popup3-close" class="popup-area"></a>
+        <div class="popup-body">
+          <div class="popup-content">
+            <a href="#popup1-close" class="popup-close"><img src="media/x.svg" alt="закрыть модальное окно" class="close-img"></a>
+                <h2 class="popup-title">Оставье отзыв</h2>
+                    <div class="footer-inputs">
+                      <input type="text" placeholder="Ваше имя" class="name-input" required>
+                      <input type="tel" placeholder="+7 999 123-45-67" class="phone-input" required  pattern="2[0-9]{3}-[0-9]{3}">
+                    </div>
+                    <div class="popup-feedback">
+                      <h2 class="feedback-title">Ваш отзыв</h2>
+                      <div class="feedback-inputs">
+                        <textarea name="text" class="popup-textarea" placeholder="Введите текст вашего сообщения"></textarea>
 
-        </div>     
-      </ь>
+                        <div class="popup-upload">
+                          <button id="upload-btn"><img src="media/upload.svg" alt="загрузить картинку"></button>
+                          <span id="upload-txt">Прикрепить фото</span>
+                          <input type="file" accept="image/*" id="files" multiple />
+                          <div class="output-div">
+                            <output id="list" class="list">
+                              <div class="upload-container"></div>
+                            </output>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+        </div>
+      </div>
+    </div>
     <!-- третий блок -->
     <div class="background-wrapper">
     <section class="second-block block">
@@ -594,7 +623,6 @@
                       — удалении Оператором информации, размещаемой Пользователем, а также персональной страницы Пользователя в случаях, установленных договором (офертой) с Пользователем;
                       — при отзыве субъектом персональных данных согласия на обработку персональных данных.
                       </p>
-        
             </div>
           </div>
         </div>

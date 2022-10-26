@@ -54,7 +54,46 @@ for (let anchor of anchors) {
   });
 };
 
-// защитная мера, чтобы возможные следующие соискатели, не брали мою работу)
+// загрузка изображений в оффере
+window.onload = () => {
+  const uploadFile = document.getElementById("files");
+  const uploadBtn = document.getElementById("upload-btn");
+  const uploadText = document.getElementById("upload-txt");
+
+  uploadBtn.addEventListener("click", function () {
+    uploadFile.click();
+  }) 
+
+  uploadFile.addEventListener("change", function () {
+    if (uploadFile.value) {
+      uploadText.innerText = uploadFile.value.match(/[\/\\]([\w\d\s\.\-(\)]+)$/)[1];
+    } else {
+      uploadText.innerText = 'Файл не выбрал';
+    };
+  });
+};
+
+document.getElementById('files').onchange = function () {
+  var src = URL.createObjectURL(this.files[0]);
+  document.getElementById('image').src = src;
+}
+
+function handleFileSelect (evt) {
+  for (const file of evt.target.files) {
+    const span = document.createElement('span');
+    const src = URL.createObjectURL(file);
+    span.innerHTML = 
+      `<div class="hover-upload">
+      <img style="height: 60px; width: 60px; border-radius: 8px; border: none; position: relative; z-index: 70; opacity: 0.7;"` + 
+      `src="${src}" title="${escape(file.name)}"></div><img class="x-upload" src="media/x.svg">`;
+
+    document.getElementById('list').insertBefore(span, null);
+  }
+}
+
+document.getElementById('files').addEventListener('change', handleFileSelect, false);
+
+// защитная мера, от возможных, следующих нечестных соискателей)
 console.log("Данное тестовое задание выполнил Воронов Егор")
 
 // уменьшаю шрифт

@@ -192,6 +192,11 @@
 
 }
 
+.feedback-title {
+    @extend %regular3;
+    color: $brown; 
+}
+
 .footer-inputs {
     padding-left: 0 10px;
     display: flex;
@@ -378,10 +383,11 @@
 #popup-confidence {
     .popup-content {
         padding: 44px 50px;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: flex-start;
         min-width: 0;
         width: auto;
+        border-radius: 25px;
         .popup-title {
             justify-items: center;
             align-self: center;
@@ -389,21 +395,7 @@
             width: auto;
             max-width: 700px;
         }
-        p {
-            position: relative;
-            margin-top: 30px;
-
-            @extend %light;
-            color: #000;
-
-            max-width: 727px;
-            
-            span {
-                @extend %regular3;
-                font-weight: 400;
-                font-size: 16px;
-            }
-        }
+       
     }
 }
 
