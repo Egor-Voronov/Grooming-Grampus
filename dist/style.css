@@ -1457,3 +1457,7 @@ a:hover {
     margin-left: 40%;
   }
 }
+#upload-btn img {
+  position: absolute;
+  margin-top: -3px;
+}
