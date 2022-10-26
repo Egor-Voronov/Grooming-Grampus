@@ -20,11 +20,11 @@
               <div class="icon cancel-btn">
                 <img src="media/xmark.svg" alt="закрыть меню" class="xmark">
               </div>
-              <li><a href="#">Наши услуги</a></li>
-              <li><a href="#">О компании</a></li>
-              <li><a href="#">Отзывы</a></li>
-              <li><a href="#">Контакты</a></li>
-              <li><div href="#" class="socials">
+              <li><a class="nav-li" href="#services">Наши услуги</a></li>
+              <li><a class="nav-li" href="#">О компании</a></li>
+              <li><a class="nav-li" href="#">Отзывы</a></li>
+              <li><a class="nav-li" href="#">Контакты</a></li>
+              <li><div class="socials">
                 <a href="https://t.me/bentley_groom" class="telegram"><div class="social"><img src="media/telegram.svg" alt="telegram" class="social-img tg"></div></a>
                 <a href="https://api.whatsapp.com/send/?phone=79115015235&text&type=phone_number&app_absent=0" class="whatsapp"><div class="social"><img src="media/whatsapp.svg" alt="whatsapp" class="social-img"></div></a>
                 <a href="https://vk.com/bentley_groom" class="vk"><div class="social"><img src="media/vk.svg" alt="вк" class="social-img"></div></a>
@@ -40,7 +40,6 @@
     <!-- второй блок - оффер + слайдер -->
       <main class="banner swiper-container">
         <div class="swiper-wrapper">
-
           <div class="swiper-slide">
             <div class="slide-image-div">
               <div class="offer-container">
@@ -49,7 +48,7 @@
                 <h2 class="offer-h2">Человеческий организм получает почти все необходимые
                   вещества именно через пищу и воду. 
                   С питанием связаны все жизненно важные функции организма. </h2>
-                  <a href="#"><button class="btn">
+                  <a href="#offer-popup"><button class="btn">
                     <div class="btn-content">
                       <img src="media/foot.svg" alt="лапка" class="btn-img">
                       <div class="btn-txt">Записаться</div>
@@ -68,18 +67,58 @@
                 </div>
             </div>
           </div>
-
-        </div>     
-      </ь>
+        </div>
+      </main>
+      <!-- модальное окно в оффере -->
+      <div id="offer-popup" class="popup">
+        <a href="#popup3-close" class="popup-area"></a>
+        <div class="popup-body">
+          <div class="popup-content">
+            <a href="#popup1-close" class="popup-close"><img src="media/x.svg" alt="закрыть модальное окно" class="close-img"></a>
+                <h2 class="popup-title">Оставьте отзыв</h2>
+                    <div class="footer-inputs">
+                      <input type="text" placeholder="Ваше имя" class="name-input" required>
+                      <input type="tel" placeholder="+7 999 123-45-67" class="phone-input" required  pattern="2[0-9]{3}-[0-9]{3}">
+                    </div>
+                    <div class="popup-feedback">
+                      <h2 class="feedback-title">Ваш отзыв</h2>
+                      <div class="feedback-inputs">
+                        <textarea name="text" class="popup-textarea" placeholder="Введите текст вашего сообщения"></textarea>
+                        <div class="popup-upload">
+                          <button id="upload-btn"><img src="media/upload.svg" alt="загрузить картинку"></button>
+                          <span id="upload-txt">Прикрепить фото</span>
+                          <input type="file" accept="image/*" id="files" multiple />
+                          <div class="output-div">
+                            <output id="list" class="list">
+                            </output>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="footer-descriptions">
+                        <p>
+                          Нажимая «Отправить» Вы соглашаетесь с
+                           <br> <a href="#popup-confidence">политикой обработки персональных данных </a> 
+                        </p>
+                        <button class="btn">
+                          <div class="btn-content">
+                            <img src="media/foot.svg" alt="лапка" class="btn-img">
+                            <div class="btn-txt">Записаться</div>
+                          </div>
+                        </button> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
     <!-- третий блок -->
     <div class="background-wrapper">
     <section class="second-block block">
       <div class="max-width-container">
-        <h2 class="title-txt title1">Наши услуги</h2>
-
+        <h2 class="title-txt title1" id="services">Наши услуги</h2>
         <div class="services">
           <!-- 1 карточка -->
-          <a href="#"><div class="services-card">
+          <div class="popup1-close popup-close-absolute"></div>
+          <a href="#popup1"><div class="services-card">
             <div class="img-container">
               <div class="images-container">
                 <div class="images images-blur"></div>
@@ -108,8 +147,86 @@
               </div>
             </div>
           </div></a>
+          <div id="popup1" class="popup">
+            <a href="#popup1-close" class="popup-area"></a>
+            <div class="popup-body">
+              <div class="popup-content">
+                <a href="#popup1-close" class="popup-close"><img src="media/x.svg" alt="закрыть модальное окно" class="close-img"></a>
+                <div class="popup-header popup-max">
+                  <div class="img-container">
+                    <div class="images-container">
+                      <div class="images images-blur"></div>
+                      <div class="images images-main"></div>
+                    </div>
+                    <svg  vg class="card-svg" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="mask0_1783_140" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="270" height="270">
+                        <rect width="270" height="270" rx="25" fill="#D2D2DB"/>
+                        </mask>
+                        <g mask="url(#mask0_1783_140)">
+                        <circle class="bottom-circle" cx="135" cy="270" r="159" fill="#C3C4D0"/>
+                        <ellipse class="card-2-circles" cx="256.5" cy="16" rx="33.5" ry="34" fill="#ECECF9"/>
+                        <circle class="card-2-circles" cx="225" cy="46" r="8.5" fill="#ECECF9" stroke="#ECECF9" stroke-width="3"/>
+                        <radialGradient id="paint0_radial_172_353" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(135 21.5) rotate(90) scale(352.5)">
+                          <stop stop-color="#C3A78E"/>
+                          <stop offset="1" stop-color="#C3A78E" stop-opacity="0"/>
+                        </radialGradient>
+                        </g>
+                    </svg>
+                  </div>
+                  <div class="popup-block1">
+                    <h2 class="popup-title">Померанский шпиц</h2>
+                    <div class="popup-description">
+                      <h3>В услугу груминга входит:</h3>
+                      <ul>
+                        <li>Мытье профессиональной косметикой</li>
+                        <li>Выбриваниешерсти между подушечками лап</li>
+                        <li>Гигиеническая стрижка интимных зон и хвоста</li>
+                        <li>Обработка ушей и глаз</li>
+                        <li>Подрезание когтей</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                  <div class="popup-block2 popup-max">
+                    <div class="popup-pricing">
+                      <h2>Базовый уход:</h2>
+                      <p>1600 р.</p>
+                    </div>
+                    <div class="popup-pricing">
+                      <h2>Стрижка под машинку:</h2>
+                      <p>+ 1200 р.<div class=""></div></p>
+                    </div>
+                    <div class="popup-pricing">
+                      <h2>Модельная стрижка:</h2>
+                      <p>+ 2500 р.</p>
+                    </div>
+                  </div>
+                  <div class="footer-background">
+                  <div class="popup-footer">
+                    <h2>Запишите своего питомца</h2>
+                    <div class="footer-inputs">
+                      <input type="text" placeholder="Ваше имя" class="name-input" required>
+                      <input type="tel" placeholder="+7 999 123-45-67" class="phone-input" required  pattern="2[0-9]{3}-[0-9]{3}">
+                    </div>
+                    <div class="footer-descriptions">
+                      <p>
+                        Нажимая «Отправить» Вы соглашаетесь с
+                         <br> <a href="#popup-confidence">политикой обработки персональных данных </a> 
+                      </p>
+                      <a href="#offer-popup"><button class="btn">
+                        <div class="btn-content">
+                          <img src="media/foot.svg" alt="лапка" class="btn-img">
+                          <div class="btn-txt">Записаться</div>
+                        </div>
+                      </button></a>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+            </div>
+          </div>
           <!-- 2 карточка -->
-          <a href="#"><div class="services-card">
+          <a href="#popup2"><div class="services-card">
             <div class="img-container">
               <div class="images-container card2">
                 <div class="images images-blur"></div>
@@ -138,8 +255,86 @@
               </div>
             </div>
           </div></a>
+          <div id="popup2" class="popup">
+            <a href="#popup1-close" class="popup-area"></a>
+            <div class="popup-body">
+              <div class="popup-content">
+                <a href="#popup1-close" class="popup-close"><img src="media/x.svg" alt="закрыть модальное окно" class="close-img"></a>
+                <div class="popup-header popup-max">
+                  <div class="img-container">
+                    <div class="images-container card2">
+                      <div class="images images-blur"></div>
+                      <div class="images images-main"></div>
+                    </div>
+                    <svg class="card-svg" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="mask0_1783_140" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="270" height="270">
+                        <rect width="270" height="270" rx="25" fill="#D2D2DB"/>
+                        </mask>
+                        <g mask="url(#mask0_1783_140)">
+                        <circle class="bottom-circle" cx="135" cy="270" r="159" fill="#C3C4D0"/>
+                        <ellipse class="card-2-circles" cx="256.5" cy="16" rx="33.5" ry="34" fill="#ECECF9"/>
+                        <circle class="card-2-circles" cx="225" cy="46" r="8.5" fill="#ECECF9" stroke="#ECECF9" stroke-width="3"/>
+                        <radialGradient id="paint0_radial_172_353" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(135 21.5) rotate(90) scale(352.5)">
+                          <stop stop-color="#C3A78E"/>
+                          <stop offset="1" stop-color="#C3A78E" stop-opacity="0"/>
+                        </radialGradient>
+                        </g>
+                    </svg>
+                  </div>
+                  <div class="popup-block1">
+                    <h2 class="popup-title">Корги</h2>
+                    <div class="popup-description">
+                      <h3>В услугу груминга входит:</h3>
+                      <ul>
+                        <li>Мытье профессиональной косметикой</li>
+                        <li>Выбриваниешерсти между подушечками лап</li>
+                        <li>Гигиеническая стрижка интимных зон и хвоста</li>
+                        <li>Обработка ушей и глаз</li>
+                        <li>Подрезание когтей</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                  <div class="popup-block2 popup-max">
+                    <div class="popup-pricing">
+                      <h2>Базовый уход:</h2>
+                      <p>1600 р.</p>
+                    </div>
+                    <div class="popup-pricing">
+                      <h2>Стрижка под машинку:</h2>
+                      <p>+ 1200 р.<div class=""></div></p>
+                    </div>
+                    <div class="popup-pricing">
+                      <h2>Модельная стрижка:</h2>
+                      <p>+ 2500 р.</p>
+                    </div>
+                  </div>
+                  <div class="footer-background">
+                  <div class="popup-footer">
+                    <h2>Запишите своего питомца</h2>
+                    <div class="footer-inputs">
+                      <input type="text" placeholder="Ваше имя" class="name-input" required>
+                      <input type="tel" placeholder="+7 999 123-45-67" class="phone-input" required  pattern="2[0-9]{3}-[0-9]{3}">
+                    </div>
+                    <div class="footer-descriptions">
+                      <p>
+                        Нажимая «Отправить» Вы соглашаетесь с
+                         <br> <a href="#popup-confidence">политикой обработки персональных данных </a> 
+                      </p>
+                      <a href="#offer-popup"><button class="btn">
+                        <div class="btn-content">
+                          <img src="media/foot.svg" alt="лапка" class="btn-img">
+                          <div class="btn-txt">Записаться</div>
+                        </div>
+                      </button></a> 
+                    </div>
+                  </div>
+                  </div>
+                </div>
+            </div>
+          </div>
           <!-- 3 карточка -->
-          <a href="#"><div class="services-card">
+          <a href="#popup3"><div class="services-card">
             <div class="img-container">
               <div class="images-container card3">
                 <div class="images images-blur"></div>
@@ -168,8 +363,87 @@
               </div>
             </div>
           </div></a>
+          <div id="popup3" class="popup">
+            <a href="#popup1-close" class="popup-area"></a>
+            <div class="popup-body">
+              <div class="popup-content">
+                <a href="#popup1-close" class="popup-close"><img src="media/x.svg" alt="закрыть модальное окно" class="close-img"></a>
+                <div class="popup-header popup-max">
+                  <div class="img-container">
+                    <div class="images-container card3">
+                      <div class="images images-blur"></div>
+                      <div class="images images-main"></div>
+                    </div>
+                    <svg class="card-svg" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="mask0_1783_140" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="270" height="270">
+                        <rect width="270" height="270" rx="25" fill="#D2D2DB"/>
+                        </mask>
+                        <g mask="url(#mask0_1783_140)">
+                        <circle class="bottom-circle" cx="135" cy="270" r="159" fill="#C3C4D0"/>
+                        <ellipse class="card-2-circles" cx="256.5" cy="16" rx="33.5" ry="34" fill="#ECECF9"/>
+                        <circle class="card-2-circles" cx="225" cy="46" r="8.5" fill="#ECECF9" stroke="#ECECF9" stroke-width="3"/>
+                        <radialGradient id="paint0_radial_172_353" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(135 21.5) rotate(90) scale(352.5)">
+                          <stop stop-color="#C3A78E"/>
+                          <stop offset="1" stop-color="#C3A78E" stop-opacity="0"/>
+                        </radialGradient>
+                        </g>
+                    </svg>
+                  </div>
+                  <div class="popup-block1">
+                    <h2 class="popup-title">
+                      Йоркширский терьер</h2>
+                    <div class="popup-description">
+                      <h3>В услугу груминга входит:</h3>
+                      <ul>
+                        <li>Мытье профессиональной косметикой</li>
+                        <li>Выбриваниешерсти между подушечками лап</li>
+                        <li>Гигиеническая стрижка интимных зон и хвоста</li>
+                        <li>Обработка ушей и глаз</li>
+                        <li>Подрезание когтей</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                  <div class="popup-block2 popup-max">
+                    <div class="popup-pricing">
+                      <h2>Базовый уход:</h2>
+                      <p>1600 р.</p>
+                    </div>
+                    <div class="popup-pricing">
+                      <h2>Стрижка под машинку:</h2>
+                      <p>+ 1200 р.<div class=""></div></p>
+                    </div>
+                    <div class="popup-pricing">
+                      <h2>Модельная стрижка:</h2>
+                      <p>+ 2500 р.</p>
+                    </div>
+                  </div>
+                  <div class="footer-background">
+                  <div class="popup-footer">
+                    <h2>Запишите своего питомца</h2>
+                    <div class="footer-inputs">
+                      <input type="text" placeholder="Ваше имя" class="name-input" required>
+                      <input type="tel" placeholder="+7 999 123-45-67" class="phone-input" required  pattern="2[0-9]{3}-[0-9]{3}">
+                    </div>
+                    <div class="footer-descriptions">
+                      <p>
+                        Нажимая «Отправить» Вы соглашаетесь с
+                         <br> <a href="#popup-confidence">политикой обработки персональных данных </a> 
+                      </p>
+                      <a href="#offer-popup"><button class="btn">
+                        <div class="btn-content">
+                          <img src="media/foot.svg" alt="лапка" class="btn-img">
+                          <div class="btn-txt">Записаться</div>
+                        </div>
+                      </button></a>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+            </div>
+          </div>
           <!-- 4 карточка -->
-          <a href="#"><div class="services-card">
+          <a href="#popup4"><div class="services-card">
             <div class="img-container">
               <div class="images-container card4">
                 <div class="images images-blur"></div>
@@ -198,8 +472,174 @@
               </div>
             </div>
           </div></a>
+          <div id="popup4" class="popup">
+            <a href="#popup1-close" class="popup-area"></a>
+            <div class="popup-body">
+              <div class="popup-content">
+                <a href="#popup1-close" class="popup-close"><img src="media/x.svg" alt="закрыть модальное окно" class="close-img"></a>
+                <div class="popup-header popup-max">
+                  <div class="img-container">
+                    <div class="images-container card4">
+                      <div class="images images-blur"></div>
+                      <div class="images images-main"></div>
+                    </div>
+                    <svg class="card-svg" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="mask0_1783_140" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="270" height="270">
+                        <rect width="270" height="270" rx="25" fill="#D2D2DB"/>
+                        </mask>
+                        <g mask="url(#mask0_1783_140)">
+                        <circle class="bottom-circle" cx="135" cy="270" r="159" fill="#C3C4D0"/>
+                        <ellipse class="card-2-circles" cx="256.5" cy="16" rx="33.5" ry="34" fill="#ECECF9"/>
+                        <circle class="card-2-circles" cx="225" cy="46" r="8.5" fill="#ECECF9" stroke="#ECECF9" stroke-width="3"/>
+                        <radialGradient id="paint0_radial_172_353" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(135 21.5) rotate(90) scale(352.5)">
+                          <stop stop-color="#C3A78E"/>
+                          <stop offset="1" stop-color="#C3A78E" stop-opacity="0"/>
+                        </radialGradient>
+                        </g>
+                    </svg>
+                  </div>
+                  <div class="popup-block1">
+                    <h2 class="popup-title">Спаниель</h2>
+                    <div class="popup-description">
+                      <h3>В услугу груминга входит:</h3>
+                      <ul>
+                        <li>Мытье профессиональной косметикой</li>
+                        <li>Выбриваниешерсти между подушечками лап</li>
+                        <li>Гигиеническая стрижка интимных зон и хвоста</li>
+                        <li>Обработка ушей и глаз</li>
+                        <li>Подрезание когтей</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                  <div class="popup-block2 popup-max">
+                    <div class="popup-pricing">
+                      <h2>Базовый уход:</h2>
+                      <p>1600 р.</p>
+                    </div>
+                    <div class="popup-pricing">
+                      <h2>Стрижка под машинку:</h2>
+                      <p>+ 1200 р.<div class=""></div></p>
+                    </div>
+                    <div class="popup-pricing">
+                      <h2>Модельная стрижка:</h2>
+                      <p>+ 2500 р.</p>
+                    </div>
+                  </div>
+                  <div class="footer-background">
+                  <div class="popup-footer">
+                    <h2>Запишите своего питомца</h2>
+                    <div class="footer-inputs">
+                      <input type="text" placeholder="Ваше имя" class="name-input" required>
+                      <input type="tel" placeholder="+7 999 123-45-67" class="phone-input" required  pattern="2[0-9]{3}-[0-9]{3}">
+                    </div>
+                    <div class="footer-descriptions">
+                      <p>
+                        Нажимая «Отправить» Вы соглашаетесь с
+                         <br> <a href="#popup-confidence">политикой обработки персональных данных </a> 
+                      </p>
+                      <a href="#offer-popup"><button class="btn">
+                        <div class="btn-content">
+                          <img src="media/foot.svg" alt="лапка" class="btn-img">
+                          <div class="btn-txt">Записаться</div>
+                        </div>
+                      </button></a>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <!-- политика конфиденциальности -->
+          <div id="popup-confidence" class="popup">
+            <a href="#popup3-close" class="popup-area"></a>
+            <div class="popup-body">
+              <div class="popup-content">
+                <a href="#popup1-close" class="popup-close"><img src="media/x.svg" alt="закрыть модальное окно" class="close-img"></a>
+                    <h2 class="popup-title">Политика конфеденциальности</h2>
+                    <p> <span> I. Общие положения </span> <br>
+                      Настоящие Положение о политике конфиденциальности (далее — Положение) является официальным документом AO «Предпроцессинговый расчетный центр», расположенного по адресу: 129085, г. Москва, Звездный бульвар, д. 19, стр. 1 (далее — «Компания»/ «Оператор»), и определяет порядок обработки и защиты информации о физических лицах (далее — Пользователи), пользующихся сервисами, информацией, услугами, программами и продуктами, расположенными на сайте с доменным именем www.uniteller.ru (далее — Сайт).
+                      Соблюдение конфиденциальности важно для Компании, ведь целью данной Политики конфиденциальности является обеспечение защиты прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну, от несанкционированного доступа и разглашения.
+                      Мы разработали Политику Конфиденциальности, которая описывает, как мы осуществляем обработку персональных данных — любые действия (операции) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных.
+                      Отношения, связанные с обработкой персональных данных и информации о пользователях Сайта, регулируются настоящим Положением, иными официальными документами Оператора и действующим законодательством РФ
+                      Обработка персональных данных осуществляется нами на законной и справедливой основе, действуя разумно и добросовестно и на основе принципов:
+                      — законности целей и способов обработки персональных данных;
+                      — добросовестности;
+                      — соответствия целей обработки персональных данных целям, заранее определенным и заявленным при сборе персональных данных, а также полномочиям Компании;
+                      — соответствия объема и характера обрабатываемых персональных данных, способов обработки персональных данных целям обработки персональных данных
+                      Настоящая Политика Конфиденциальности регулирует любой вид обработки персональных данных и информации личного характера (любой информации, позволяющей установить личность, и любой иной информации, связанной с этим) о физических лицах, которые являются потребителями продукции или услуг Компании.
+                      Настоящая Политика распространяется на обработку личных, персональных данных, собранных любыми средствами, как активными, так и пассивными, как через Интернет, так и без его использования, от лиц, находящихся в любой точке мира.
+                      <br>
+                      <br>
+                      <span> II. Сбор персональных данных</span> <br>
+                      Целью обработки персональных данных является выполнения обязательств Оператора перед Пользователями в отношении использования Сайта и его сервисов.
+                      Обработка персональных данных пользователей осуществляется с согласия субъекта персональных данных на обработку его персональных данных.
+                      Под персональными данными понимается любая информация, относящаяся к прямо или косвенно определенному, или определяемому физическому лицу (субъекту персональных данных).
+                      Мы можем запросить у Вас персональные данные в любой момент, когда Вы связываетесь с Компанией. Компания может использовать такие данные в соответствии с настоящей Политикой Конфиденциальности. Она также может совмещать такую информацию с иной информацией для целей предоставления и улучшения своих продуктов, услуг, информационного наполнения (контента) и коммуникаций.
+                      Ниже приведены некоторые примеры типов персональных данных, которые Компания может собирать, и как мы можем использовать такую информацию.
+                      Мы можем собирать различные данные/информацию, включая:
+                      — имя и фамилию,
+                      — номер телефона;
+                      — адрес электронной почты;
+                      — сведения о документе, удостоверяющем личность;
+                      — информацию о банковских картах (имя владельца карты, сокращенный номер карты).
+                      Персональные данные могут также включать в себя дополнительно предоставляемые Пользователями по запросу Оператора в целях исполнения Оператором обязательств перед Пользователями, вытекающих из договора на оказание услуг. Оператор вправе, в частности, запросить у Пользователя копию документа, удостоверяющего личность, либо иного документа, содержащего имя, фамилию, фотографию Пользователя, а также иные дополнительные данные, которые, по усмотрению Оператора, будут являться необходимыми и достаточными для идентификации такого Пользователя и позволят исключить злоупотребления и нарушения прав третьих лиц.
+                      Когда Вы привлекаете к нашим мероприятиям и активностям других лиц или приглашаете их к коммуникациям с нами, Компания может собирать предоставляемые Вами персональные данных об этих лицах, такую как: имя, фамилия, адрес электронной почты и номер телефона.
+                      При обработке персональных данных нами обеспечивается точность персональных данных, их достаточность, а в необходимых случаях и актуальность по отношению к целям обработки персональных данных.
+                      <br>
+                      <br>
+                      <span>III. Хранение и использование персональных данных</span> <br>
+                      Персональные данные Пользователей хранятся исключительно на электронных носителях и обрабатываются с использованием автоматизированных систем, за исключением случаев, когда неавтоматизированная обработка персональных данных необходима в связи с исполнением требований законодательства.
+                      <br>
+                      <br>
+                      КАК МЫ ИСПОЛЬЗУЕМ ВАШУ ПЕРСОНАЛЬНУЮ ИНФОРМАЦИЮ
+                      Собираемые нами персональные данные позволяют направлять Вам уведомления о новых продуктах и услугах Компании и партнеров, специальных предложениях и различных событиях. Они также помогает нам улучшать наши услуги, контент и коммуникации. Если Вы не желаете быть включенным в наш список рассылки, Вы можете в любое время отказаться от рассылки путём информирования нас по указанным контактам для обратной связи, а также внесения изменений в настройках вашего профиля на сайте.
+                      Время от времени мы можем использовать Ваши персональные данные для отправки важных уведомлений, содержащих информацию об изменениях наших положений, условий и политик. Поскольку такая информация важна для Ваших взаимоотношений с Компанией, Вы не можете отказаться от получения таких сообщений.
+                      Мы также можем использовать персональную информацию для внутренних целей, таких как: проведение аудита, анализ данных и различных исследований в целях улучшения продуктов и услуг Компании, а также взаимодействие с потребителями.
+                      <br>
+                      <br>
+                      <span>СБОР И ИСПОЛЬЗОВАНИЕ ИНФОРМАЦИИ, НЕ ЯВЛЯЮЩЕЙСЯ ПЕРСОНАЛЬНОЙ</span> <br>
+                      Мы также собираем персональные данные, не являющиеся персональными − данные, не позволяющие прямо ассоциировать их с каким-либо определённым лицом. Мы можем собирать, использовать, передавать и раскрывать информацию, не являющуюся персональной, для любых целей. Ниже приведены примеры информации, не являющейся персональной, которую мы собираем, и как мы можем её использовать:
+                      Мы можем собирать персональные данные, такие как: сведения о роде занятий, языке, почтовом индексе, уникальном идентификаторе устройства, местоположении и временной зоне, в которой используется тот или иной продукт, для того чтобы лучше понимать поведение потребителей и улучшать наши продукты, услуги и коммуникации.
+                      Мы можем также собирать персональные данные/информацию о том, чем интересуется пользователь на нашем веб-сайте при использовании других наших продуктов и сервисов. Такие персональные данные/информация собирается и используется для того, чтобы помочь нам предоставлять более полезную информацию нашим покупателям и для понимания того, какие элементы нашего сайта, продуктов и услуг наиболее интересны. Для целей настоящей Политики Конфиденциальности совокупные данные рассматриваются как данные/информация, не являющиеся персональными.
+                      Если мы совмещаем информацию, не являющуюся персональной, с персональной информацией, такая совокупная информация будет рассматриваться как персональная информация, пока такая информация будет являться совмещённой.
+                      <br>
+                      <br>
+                      <span>IV. Передача персональных данных</span> <br>
+                      Персональные данные Пользователей не передаются каким-либо третьим лицам, за исключением случаев, прямо предусмотренных настоящими Правилами.
+                      Обработка персональных данных Пользователя осуществляется без ограничения срока, любым законным способом, в том числе в информационных системах персональных данных с использованием средств автоматизации или без использования таких средств
+                      Пользователь соглашается с тем, что Оператор вправе передавать персональные данные третьим лицам, в частности, курьерским службам, организациям почтовой связи, операторам электросвязи и т.д., исключительно для целей, указанных в разделе «Сбор персональных данных» настоящей Политики конфиденциальности
+                      При указании пользователя или при наличии согласия пользователя возможна передача персональных данных Пользователя третьим лицам-контрагентам Оператора с условием принятия такими контрагентами обязательств по обеспечению конфиденциальности полученной информации, в частности, при использовании приложений.
+                      Приложения, используемые Пользователями на Сайте, размещаются и поддерживаются третьими лицами (разработчиками), которые действуют независимо от Оператора и не выступают от имени или по поручению Оператора. Пользователи обязаны самостоятельно ознакомиться с правилами оказания услуг и политикой защиты персональных данных таких третьих лиц (разработчиков) до начала использования соответствующих приложений.
+                      Персональные данные Пользователя могут быть переданы по запросам уполномоченных органов государственной власти РФ только по основаниям и в порядке, установленным законодательством РФ.
+                      Оператор осуществляет блокирование персональных данных, относящихся к соответствующему Пользователю, с момента обращения или запроса Пользователя или его законного представителя либо уполномоченного органа по защите прав субъектов персональных данных на период проверки, в случае выявления недостоверных персональных данных или неправомерных действий.
+                      <br>
+                      <br>
+                      <span>РАСКРЫТИЕ ИНФОРМАЦИИ ТРЕТЬИМ ЛИЦАМ</span> <br>
+                      В некоторых случаях Компания может предоставлять определенную персональную информацию и данные стратегическим партнерам, которые работают с Компанией для предоставления продуктов и услуг, или тем из них, которые помогают Компании реализовывать продукты и услуги потребителям. Мы предоставляем третьим лицам минимальный объем персональных данных, необходимый только для оказания требуемой услуги или проведения необходимой транзакции.
+                      Персональная информация будет предоставляться Компанией только в целях обеспечения потребителей продуктами и услугами, а также для улучшения этих продуктов и услуг, связанных с ними коммуникаций. Такая информация не будет предоставляться третьим лицам для их маркетинговых целей.
+                      Для использования Ваших персональных данных для любой иной цели мы запросим Ваше Согласие на обработку Ваших персональных данных
+                      <br>
+                      <br>
+                      <span>ПОСТАВЩИКИ УСЛУГ</span> <br>
+                      Компания предоставляет персональные данные/информацию Компаниям, оказывающим такие услуги, как: обработка информации, предоставление кредитов, исполнение заказов потребителей, доставка, иные виды обслуживания потребителей, определение вашего интереса к нашим продуктам и услугам, проведение опросов, направленных на изучение наших потребителей или удовлетворения качеством сервиса. Такие компании обязуются защищать Вашу информацию независимо от страны своего расположения.
+                      <br>
+                      <br>
+                      <span> ИНЫЕ ЛИЦА</span> <br>
+                      Компании может быть необходимо — в соответствии с законом, судебным порядком, в судебном разбирательстве и/или на основании публичных запросов или запросов от государственных органов на территории или вне территории страны Вашего пребывания — раскрыть Ваши персональные данные. Мы также можем раскрывать персональные данные/информацию о Вас, если мы определим, что такое раскрытие необходимо или уместно в целях национальной безопасности, поддержания правопорядка или иных общественно важных случаях.
+                      Мы также можем раскрывать персональные данные/информацию о Вас, если мы определим, что раскрытие необходимо для приведения в исполнение наших положений и условий либо для целей защиты нашей деятельности и наших пользователей. Дополнительно в случае реорганизации, слияния или продажи мы можем передать любую или всю собираемую нами персональную информацию соответствующему третьему лицу.
+                      V. Уничтожение персональных данных
+                      Персональные данные пользователя уничтожаются при:
+                      — удалении Оператором информации, размещаемой Пользователем, а также персональной страницы Пользователя в случаях, установленных договором (офертой) с Пользователем;
+                      — при отзыве субъектом персональных данных согласия на обработку персональных данных.
+                      </p>
+            </div>
+          </div>
+        </div>
+
           <!-- 5 карточка -->
-          <a href="#"><div class="services-card">
+          <div class="popup2-close popup-close-absolute"></div>
+          <a href="#popup5"><div class="services-card">
             <div class="img-container">
               <div class="images-container card5">
                 <div class="images images-blur"></div>
@@ -228,8 +668,86 @@
               </div>
             </div>
           </div></a>
+          <div id="popup5" class="popup">
+            <a href="#popup2-close" class="popup-area"></a>
+            <div class="popup-body">
+              <div class="popup-content">
+                <a href="#popup2-close" class="popup-close"><img src="media/x.svg" alt="закрыть модальное окно" class="close-img"></a>
+                <div class="popup-header popup-max">
+                  <div class="img-container">
+                    <div class="images-container card5">
+                      <div class="images images-blur"></div>
+                      <div class="images images-main"></div>
+                    </div>
+                    <svg class="card-svg" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="mask0_1783_140" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="270" height="270">
+                        <rect width="270" height="270" rx="25" fill="#D2D2DB"/>
+                        </mask>
+                        <g mask="url(#mask0_1783_140)">
+                        <circle class="bottom-circle" cx="135" cy="270" r="159" fill="#C3C4D0"/>
+                        <ellipse class="card-2-circles" cx="256.5" cy="16" rx="33.5" ry="34" fill="#ECECF9"/>
+                        <circle class="card-2-circles" cx="225" cy="46" r="8.5" fill="#ECECF9" stroke="#ECECF9" stroke-width="3"/>
+                        <radialGradient id="paint0_radial_172_353" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(135 21.5) rotate(90) scale(352.5)">
+                          <stop stop-color="#C3A78E"/>
+                          <stop offset="1" stop-color="#C3A78E" stop-opacity="0"/>
+                        </radialGradient>
+                        </g>
+                    </svg>
+                  </div>
+                  <div class="popup-block1">
+                    <h2 class="popup-title">Болонка</h2>
+                    <div class="popup-description">
+                      <h3>В услугу груминга входит:</h3>
+                      <ul>
+                        <li>Мытье профессиональной косметикой</li>
+                        <li>Выбриваниешерсти между подушечками лап</li>
+                        <li>Гигиеническая стрижка интимных зон и хвоста</li>
+                        <li>Обработка ушей и глаз</li>
+                        <li>Подрезание когтей</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                  <div class="popup-block2 popup-max">
+                    <div class="popup-pricing">
+                      <h2>Базовый уход:</h2>
+                      <p>1600 р.</p>
+                    </div>
+                    <div class="popup-pricing">
+                      <h2>Стрижка под машинку:</h2>
+                      <p>+ 1200 р.<div class=""></div></p>
+                    </div>
+                    <div class="popup-pricing">
+                      <h2>Модельная стрижка:</h2>
+                      <p>+ 2500 р.</p>
+                    </div>
+                  </div>
+                  <div class="footer-background">
+                  <div class="popup-footer">
+                    <h2>Запишите своего питомца</h2>
+                    <div class="footer-inputs">
+                      <input type="text" placeholder="Ваше имя" class="name-input" required>
+                      <input type="tel" placeholder="+7 999 123-45-67" class="phone-input" required  pattern="2[0-9]{3}-[0-9]{3}">
+                    </div>
+                    <div class="footer-descriptions">
+                      <p>
+                        Нажимая «Отправить» Вы соглашаетесь с
+                         <br> <a href="#popup-confidence">политикой обработки персональных данных </a> 
+                      </p>
+                      <a href="#offer-popup"><button class="btn">
+                        <div class="btn-content">
+                          <img src="media/foot.svg" alt="лапка" class="btn-img">
+                          <div class="btn-txt">Записаться</div>
+                        </div>
+                      </button></a>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+            </div>
+          </div>
           <!-- 6 карточка -->
-          <a href="#"><div class="services-card">
+          <a href="#popup6"><div class="services-card">
             <div class="img-container">
               <div class="images-container card6">
                 <div class="images images-blur"></div>
@@ -258,8 +776,86 @@
               </div>
             </div>
           </div></a>
+          <div id="popup6" class="popup">
+            <a href="#popup2-close" class="popup-area"></a>
+            <div class="popup-body">
+              <div class="popup-content">
+                <a href="#popup2-close" class="popup-close"><img src="media/x.svg" alt="закрыть модальное окно" class="close-img"></a>
+                <div class="popup-header popup-max">
+                  <div class="img-container">
+                    <div class="images-container card6">
+                      <div class="images images-blur"></div>
+                      <div class="images images-main"></div>
+                    </div>
+                    <svg class="card-svg" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="mask0_1783_140" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="270" height="270">
+                        <rect width="270" height="270" rx="25" fill="#D2D2DB"/>
+                        </mask>
+                        <g mask="url(#mask0_1783_140)">
+                        <circle class="bottom-circle" cx="135" cy="270" r="159" fill="#C3C4D0"/>
+                        <ellipse class="card-2-circles" cx="256.5" cy="16" rx="33.5" ry="34" fill="#ECECF9"/>
+                        <circle class="card-2-circles" cx="225" cy="46" r="8.5" fill="#ECECF9" stroke="#ECECF9" stroke-width="3"/>
+                        <radialGradient id="paint0_radial_172_353" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(135 21.5) rotate(90) scale(352.5)">
+                          <stop stop-color="#C3A78E"/>
+                          <stop offset="1" stop-color="#C3A78E" stop-opacity="0"/>
+                        </radialGradient>
+                        </g>
+                    </svg>
+                  </div> 
+                  <div class="popup-block1">
+                    <h2 class="popup-title">Бивер-Йорк</h2>
+                    <div class="popup-description">
+                      <h3>В услугу груминга входит:</h3>
+                      <ul>
+                        <li>Мытье профессиональной косметикой</li>
+                        <li>Выбриваниешерсти между подушечками лап</li>
+                        <li>Гигиеническая стрижка интимных зон и хвоста</li>
+                        <li>Обработка ушей и глаз</li>
+                        <li>Подрезание когтей</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                  <div class="popup-block2 popup-max">
+                    <div class="popup-pricing">
+                      <h2>Базовый уход:</h2>
+                      <p>1600 р.</p>
+                    </div>
+                    <div class="popup-pricing">
+                      <h2>Стрижка под машинку:</h2>
+                      <p>+ 1200 р.<div class=""></div></p>
+                    </div>
+                    <div class="popup-pricing">
+                      <h2>Модельная стрижка:</h2>
+                      <p>+ 2500 р.</p>
+                    </div>
+                  </div>
+                  <div class="footer-background">
+                  <div class="popup-footer">
+                    <h2>Запишите своего питомца</h2>
+                    <div class="footer-inputs">
+                      <input type="text" placeholder="Ваше имя" class="name-input" required>
+                      <input type="tel" placeholder="+7 999 123-45-67" class="phone-input" required  pattern="2[0-9]{3}-[0-9]{3}">
+                    </div>
+                    <div class="footer-descriptions">
+                      <p>
+                        Нажимая «Отправить» Вы соглашаетесь с
+                         <br> <a href="#popup-confidence">политикой обработки персональных данных </a> 
+                      </p>
+                      <a href="#offer-popup"><button class="btn">
+                        <div class="btn-content">
+                          <img src="media/foot.svg" alt="лапка" class="btn-img">
+                          <div class="btn-txt">Записаться</div>
+                        </div>
+                      </button></a>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+            </div>
+          </div>
           <!-- 7 карточка -->
-          <a href="#"><div class="services-card">
+          <a href="#popup7"><div class="services-card">
             <div class="img-container">
               <div class="images-container card7">
                 <div class="images images-blur"></div>
@@ -288,8 +884,86 @@
               </div>
             </div>
           </div></a>
+          <div id="popup7" class="popup">
+            <a href="#popup2-close" class="popup-area"></a>
+            <div class="popup-body">
+              <div class="popup-content">
+                <a href="#popup2-close" class="popup-close"><img src="media/x.svg" alt="закрыть модальное окно" class="close-img"></a>
+                <div class="popup-header popup-max">
+                  <div class="img-container">
+                    <div class="images-container card7">
+                      <div class="images images-blur"></div>
+                      <div class="images images-main"></div>
+                    </div>
+                    <svg class="card-svg" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="mask0_1783_140" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="270" height="270">
+                        <rect width="270" height="270" rx="25" fill="#D2D2DB"/>
+                        </mask>
+                        <g mask="url(#mask0_1783_140)">
+                        <circle class="bottom-circle" cx="135" cy="270" r="159" fill="#C3C4D0"/>
+                        <ellipse class="card-2-circles" cx="256.5" cy="16" rx="33.5" ry="34" fill="#ECECF9"/>
+                        <circle class="card-2-circles" cx="225" cy="46" r="8.5" fill="#ECECF9" stroke="#ECECF9" stroke-width="3"/>
+                        <radialGradient id="paint0_radial_172_353" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(135 21.5) rotate(90) scale(352.5)">
+                          <stop stop-color="#C3A78E"/>
+                          <stop offset="1" stop-color="#C3A78E" stop-opacity="0"/>
+                        </radialGradient>
+                        </g>
+                    </svg>
+                  </div> 
+                  <div class="popup-block1">
+                    <h2 class="popup-title">Пудель</h2>
+                    <div class="popup-description">
+                      <h3>В услугу груминга входит:</h3>
+                      <ul>
+                        <li>Мытье профессиональной косметикой</li>
+                        <li>Выбриваниешерсти между подушечками лап</li>
+                        <li>Гигиеническая стрижка интимных зон и хвоста</li>
+                        <li>Обработка ушей и глаз</li>
+                        <li>Подрезание когтей</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                  <div class="popup-block2 popup-max">
+                    <div class="popup-pricing">
+                      <h2>Базовый уход:</h2>
+                      <p>1600 р.</p>
+                    </div>
+                    <div class="popup-pricing">
+                      <h2>Стрижка под машинку:</h2>
+                      <p>+ 1200 р.<div class=""></div></p>
+                    </div>
+                    <div class="popup-pricing">
+                      <h2>Модельная стрижка:</h2>
+                      <p>+ 2500 р.</p>
+                    </div>
+                  </div>
+                  <div class="footer-background">
+                  <div class="popup-footer">
+                    <h2>Запишите своего питомца</h2>
+                    <div class="footer-inputs">
+                      <input type="text" placeholder="Ваше имя" class="name-input" required>
+                      <input type="tel" placeholder="+7 999 123-45-67" class="phone-input" required  pattern="2[0-9]{3}-[0-9]{3}">
+                    </div>
+                    <div class="footer-descriptions">
+                      <p>
+                        Нажимая «Отправить» Вы соглашаетесь с
+                         <br> <a href="#popup-confidence">политикой обработки персональных данных </a> 
+                      </p>
+                      <a href="#offer-popup"><button class="btn">
+                        <div class="btn-content">
+                          <img src="media/foot.svg" alt="лапка" class="btn-img">
+                          <div class="btn-txt">Записаться</div>
+                        </div>
+                      </button></a>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+            </div>
+          </div>
           <!-- 8 карточка -->
-          <a href="#"><div class="services-card">
+          <a href="#popup8"><div class="services-card">
             <div class="img-container">
               <div class="images-container card8">
                 <div class="images images-blur"></div>
@@ -318,6 +992,84 @@
               </div>
             </div>
           </div></a>
+          <div id="popup8" class="popup">
+            <a href="#popup2-close" class="popup-area"></a>
+            <div class="popup-body">
+              <div class="popup-content">
+                <a href="#popup2-close" class="popup-close"><img src="media/x.svg" alt="закрыть модальное окно" class="close-img"></a>
+                <div class="popup-header popup-max">
+                  <div class="img-container">
+                    <div class="images-container card8">
+                      <div class="images images-blur"></div>
+                      <div class="images images-main"></div>
+                    </div>
+                    <svg class="card-svg" width="270" height="270" viewBox="0 0 270 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="mask0_1783_140" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="270" height="270">
+                        <rect width="270" height="270" rx="25" fill="#D2D2DB"/>
+                        </mask>
+                        <g mask="url(#mask0_1783_140)">
+                        <circle class="bottom-circle" cx="135" cy="270" r="159" fill="#C3C4D0"/>
+                        <ellipse class="card-2-circles" cx="256.5" cy="16" rx="33.5" ry="34" fill="#ECECF9"/>
+                        <circle class="card-2-circles" cx="225" cy="46" r="8.5" fill="#ECECF9" stroke="#ECECF9" stroke-width="3"/>
+                        <radialGradient id="paint0_radial_172_353" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(135 21.5) rotate(90) scale(352.5)">
+                          <stop stop-color="#C3A78E"/>
+                          <stop offset="1" stop-color="#C3A78E" stop-opacity="0"/>
+                        </radialGradient>
+                        </g>
+                    </svg>
+                  </div>
+                  <div class="popup-block1">
+                    <h2 class="popup-title">Кошки</h2>
+                    <div class="popup-description">
+                      <h3>В услугу груминга входит:</h3>
+                      <ul>
+                        <li>Мытье профессиональной косметикой</li>
+                        <li>Выбриваниешерсти между подушечками лап</li>
+                        <li>Гигиеническая стрижка интимных зон и хвоста</li>
+                        <li>Обработка ушей и глаз</li>
+                        <li>Подрезание когтей</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                  <div class="popup-block2 popup-max">
+                    <div class="popup-pricing">
+                      <h2>Базовый уход:</h2>
+                      <p>1600 р.</p>
+                    </div>
+                    <div class="popup-pricing">
+                      <h2>Стрижка под машинку:</h2>
+                      <p>+ 1200 р.<div class=""></div></p>
+                    </div>
+                    <div class="popup-pricing">
+                      <h2>Модельная стрижка:</h2>
+                      <p>+ 2500 р.</p>
+                    </div>
+                  </div>
+                  <div class="footer-background">
+                  <div class="popup-footer">
+                    <h2>Запишите своего питомца</h2>
+                    <div class="footer-inputs">
+                      <input type="text" placeholder="Ваше имя" class="name-input" required>
+                      <input type="tel" placeholder="+7 999 123-45-67" class="phone-input" required  pattern="2[0-9]{3}-[0-9]{3}">
+                    </div>
+                    <div class="footer-descriptions">
+                      <p>
+                        Нажимая «Отправить» Вы соглашаетесь с
+                         <br> <a href="#popup-confidence">политикой обработки персональных данных </a> 
+                      </p>
+                      <a href="#offer-popup"><button class="btn">
+                        <div class="btn-content">
+                          <img src="media/foot.svg" alt="лапка" class="btn-img">
+                          <div class="btn-txt">Записаться</div>
+                        </div>
+                      </button></a>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
