@@ -393,7 +393,16 @@
             position: relative;
             margin-top: 30px;
 
-            max-width: 827px;
+            @extend %light;
+            color: #000;
+
+            max-width: 727px;
+            
+            span {
+                @extend %regular3;
+                font-weight: 400;
+                font-size: 16px;
+            }
         }
     }
 }
