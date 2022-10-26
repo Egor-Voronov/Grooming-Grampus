@@ -84,7 +84,7 @@ function handleFileSelect (evt) {
     const src = URL.createObjectURL(file);
     span.innerHTML = 
       `<div class="hover-upload">
-      <img style="height: 60px; width: 60px; border-radius: 8px; border: none; position: relative; z-index: 70; opacity: 0.7;"` + 
+      <img class="opacity" style="height: 60px; width: 60px; border-radius: 8px; border: none; position: relative; z-index: 70; opacity: .6;"` + 
       `src="${src}" title="${escape(file.name)}"></div><img class="x-upload" src="media/x.svg">`;
 
     document.getElementById('list').insertBefore(span, null);
