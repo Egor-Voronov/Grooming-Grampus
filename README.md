@@ -1,7 +1,5 @@
-# тестовое задание для Студии интернет-решений Грампус
-## Деплой - https://egor-voronov.github.io/Grooming-Grampus/dist/index.html
-### чтобы запустить проект нужно:
-  * переключиться на dev-ветку в терминале (git checkout dev)
-  * прописать npm i в терминале
-  * там же прописать npm run build / watch / dev и открыть сгенерированный вебпаком сайт, из директории /dist
-  
+## deploy - https://egor-voronov.github.io/Grooming-Grampus/dist/index.html
+### to start the project you need to:
+  * go to the dev branch in the terminal (git checkout dev)
+  * type npm i in the terminal
+  * there write npm run build / watch / dev and open the generated site, from the /dist directory
